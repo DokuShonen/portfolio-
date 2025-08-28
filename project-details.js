@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "images/projets/immo/client.png"
             ],
             links: {
-                github: "https://github.com/votreuser/projet-immobilier",
+                github: "https://github.com/DokuShonen/immo.git",
                 live: "https://immobilier-exemple.com"
             }
         }
@@ -136,4 +136,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // Redirection si le projet n'existe pas
         window.location.href = 'index.html#projects';
     }
+
 });
