@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du projet | Ulrich WENDSONGDE</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232563eb'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3EUW%3C/text%3E%3C/svg%3E">
+    <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+0lEQVRYhe2WMQ7CMAxFnwMkFm7AwhW4AQdgYeMGHICFjRtwABY2bsABWNi4AQdgYeMGHICFjRtwABa2dAMWpEhR2qRO1C9Zie3E/5/jpE1RFEVRFEVRFEVRlP/EA9gCJ+AB3IFW/LsBO2AOtL8Q0AB74Aq8gDfQZ/QW7sBZ5M6B5hMBR+ApNn8LgUzOQkQt4Cw2eQN9QcBd5D6AuhBwE7lvYFQIuIrcDzAuBFxE7gcICgFnkfsB4kLASeR+gLQQcBS5H2BSCDiI3A8wLQQcRO4HmBUC9iL3A8wLAXuR+wEWhYBf5wLzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQkVRFEVRFEVRFEX5S97JpVfRutTkLAAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+0lEQVRYhe2WMQ7CMAxFnwMkFm7AwhW4AQdgYeMGHICFjRtwABY2bsABWNi4AQdgYeMGHICFjRtwABa2dAMWpEhR2qRO1C9Zie3E/5/jpE1RFEVRFEVRFEVRlP/EA9gCJ+AB3IFW/LsBO2AOtL8Q0AB74Aq8gDfQZ/QW7sBZ5M6B5hMBR+ApNn8LgUzOQkQt4Cw2eQN9QcBd5D6AuhBwE7lvYFQIuIrcDzAuBFxE7gcICgFnkfsB4kLASeR+gLQQcBS5H2BSCDiI3A8wLQQcRO4HmBUC9iL3A8wLAXuR+wEWhYBf5wLzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQkVRFEVRFEVRFEX5S97JpVfRutTkLAAAAABJRU5ErkJggg==">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-details-container {
+            padding: 120px 0 80px;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+        
+        .back-button:hover {
+            gap: 0.75rem;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .project-gallery {
+            margin-bottom: 3rem;
+        }
+        
+        .project-main-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .thumbnail {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-info {
+            background-color: var(--background-light);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .project-description {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .project-thumbnails {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .project-info {
+                padding: 1.5rem;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .project-links a {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation fixe -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">UW</span>
+                <span class="logo-name">Ulrich WENDSONGDE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#skills">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-details-container">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+            
+            <div class="project-header">
+                <h1 id="project-title">Site statique d'entreprise d'architecture</h1>
+                <p id="project-subtitle">Développement Front-End</p>
+            </div>
+
+            <div class="project-gallery">
+                <img id="main-project-image" src="images/projets/archiburkina/acceuil.png" alt="Projet" class="project-main-image">
+                
+                <div class="project-thumbnails" id="project-thumbnails">
+                    <!-- Les miniatures seront ajoutées par JavaScript -->
+                </div>
+            </div>
+            
+            <div class="project-info">
+                <h2>Description du projet</h2>
+                <p id="project-full-description" class="project-description">
+                    Réalisation complète d'un site vitrine responsive pour une entreprise fictive d'architecture. 
+                    Le projet incluait la création d'une maquette Figma, le développement front-end avec HTML/CSS/JavaScript,
+                    et l'optimisation pour les mobiles. J'ai implémenté des animations fluides et une navigation intuitive.
+                </p>
+                
+                <h3>Technologies utilisées</h3>
+                <div class="project-technologies" id="project-techs">
+                    <!-- Les badges techno seront ajoutés par JavaScript -->
+                </div>
+                
+                <h3>Liens du projet</h3>
+                <div class="project-links">
+                    <!-- Les liens seront ajoutés par JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Ulrich WENDSONGDE</h3>
+                    <p>Étudiant en Génie Informatique passionné par l'innovation technologique.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#about">À propos</a></li>
+                        <li><a href="index.html#skills">Compétences</a></li>
+                        <li><a href="index.html#projects">Projets</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Réseaux sociaux</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/DokuShonen" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/ulrich-wendsongde" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:kindaulrich1@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ulrich WENDSONGDE. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-details.js"></script>
+</body>
+</html>
