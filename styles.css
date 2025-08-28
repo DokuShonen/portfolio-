@@ -1,17 +1,18 @@
 :root {
-  --primary-color: #3498db;
-  --primary-dark: #2980b9;
-  --secondary-color: #2c3e50;
-  --accent-color: #e74c3c;
+  --primary-color: #2c3e50;
+  --primary-dark: #1a252f;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
   --light-color: #ecf0f1;
   --dark-color: #2c3e50;
-  --text-color: #34495e;
+  --text-color: #2c3e50;
   --text-light: #7f8c8d;
   --border-color: #bdc3c7;
   --success-color: #27ae60;
   --background-light: #ffffff;
   --background-dark: #f5f7fa;
 }
+
 /* Reset et base */
 * {
   margin: 0;
@@ -62,7 +63,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   backdrop-filter: blur(10px);
@@ -87,7 +88,7 @@ p {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
   font-weight: 700;
   border-radius: 6px;
@@ -95,7 +96,7 @@ p {
 
 .logo-name {
   font-weight: 600;
-  color: var(--dark-color);
+  color: white;
 }
 
 .nav-menu {
@@ -106,7 +107,7 @@ p {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-weight: 500;
   position: relative;
   padding: 0.5rem 0;
@@ -114,7 +115,7 @@ p {
 }
 
 .nav-menu a:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .nav-menu a::after {
@@ -124,7 +125,7 @@ p {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   transition: width 0.3s;
 }
 
@@ -142,7 +143,7 @@ p {
 .mobile-menu-btn span {
   width: 25px;
   height: 3px;
-  background-color: var(--dark-color);
+  background-color: white;
   transition: all 0.3s;
 }
 
@@ -167,7 +168,7 @@ p {
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -206,7 +207,7 @@ p {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--accent-color);
   border-radius: 50%;
   z-index: 1;
   animation: pulse 3s infinite;
@@ -228,24 +229,24 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: #2980b9;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
   transform: translateY(-2px);
 }
@@ -267,7 +268,7 @@ p {
 .section-divider {
   width: 60px;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   margin: 1.5rem auto;
 }
 
@@ -301,6 +302,7 @@ p {
 .cv-content p {
   margin-bottom: 2rem;
   font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 .download-buttons {
@@ -315,16 +317,19 @@ p {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
   transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
 .download-btn:hover {
-  background-color: var(--primary-dark);
+  background-color: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -343,6 +348,7 @@ p {
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
+  border-left: 4px solid var(--accent-color);
 }
 
 .skill-category:hover {
@@ -358,47 +364,53 @@ p {
 
 .skill-category-header i {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
-.skills-grid {
+/* Skills Grid - Version Icônes */
+.skills-grid-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-icon-item {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--background-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.skill-item {
-  margin-bottom: 1rem;
+.skill-icon-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
+  color: white;
 }
 
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+.skill-icon-item:hover i {
+  color: white;
 }
 
-.skill-name {
+.skill-icon-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+.skill-icon-item span {
   font-weight: 500;
-}
-
-.skill-level {
-  color: var(--text-light);
   font-size: 0.9rem;
-}
-
-.skill-bar {
-  height: 8px;
-  background-color: var(--border-color);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 4px;
-  width: 0;
-  transition: width 1.5s ease-in-out;
 }
 
 /* Projects Section */
@@ -415,6 +427,8 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .project-card:hover {
@@ -445,7 +459,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(37, 99, 235, 0.9);
+  background: rgba(52, 152, 219, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,7 +483,7 @@ p {
   width: 50px;
   height: 50px;
   background-color: white;
-  color: var(--primary-color);
+  color: var(--accent-color);
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s;
@@ -505,7 +519,7 @@ p {
 
 .project-tech span {
   background-color: var(--background-dark);
-  color: var(--primary-color);
+  color: var(--accent-color);
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -516,7 +530,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   transition: gap 0.3s;
@@ -549,6 +563,8 @@ p {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .contact-item:hover {
@@ -561,7 +577,7 @@ p {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
   border-radius: 8px;
   font-size: 1.25rem;
@@ -579,7 +595,7 @@ p {
 }
 
 .contact-details a:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .contact-form {
@@ -621,7 +637,7 @@ p {
 }
 
 .form-group input:focus, .form-group textarea:focus {
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
   outline: none;
 }
 
@@ -634,13 +650,13 @@ p {
   font-size: 0.8rem;
   background-color: var(--background-light);
   padding: 0 0.5rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
   z-index: 2;
 }
 
 /* Footer */
 .main-footer {
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: white;
   padding: 4rem 0 2rem;
 }
@@ -703,7 +719,7 @@ p {
 }
 
 .social-icons a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   transform: translateY(-3px);
 }
 
@@ -712,6 +728,15 @@ p {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #94a3b8;
+}
+
+/* Styles spécifiques pour WhatsApp */
+.contact-item .fa-whatsapp {
+  color: #25D366;
+}
+
+.footer-social .fa-whatsapp {
+  color: #25D366;
 }
 
 /* Animations */
@@ -782,6 +807,10 @@ p {
     margin: 1.5rem 0;
   }
   
+  .nav-menu a {
+    color: var(--text-color);
+  }
+  
   .mobile-menu-btn {
     display: flex;
   }
@@ -800,6 +829,15 @@ p {
   
   .skills-container {
     grid-template-columns: 1fr;
+  }
+  
+  .skills-grid-icons {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-icon-item i {
+    font-size: 2rem;
   }
   
   .projects-grid {
@@ -830,75 +868,18 @@ p {
   .hero-subtitle {
     font-size: 1.25rem;
   }
-}
-
-/* Skills Section - Version Icônes */
-.skills-grid-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.skill-icon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1rem;
-  background-color: var(--background-light);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.skill-icon-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.skill-icon-item:hover i {
-  color: white;
-}
-
-.skill-icon-item i {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--primary-color);
-  transition: color 0.3s ease;
-}
-
-.skill-icon-item span {
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-grid-icons {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
-  }
   
-  .skill-icon-item i {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
   .skills-grid-icons {
     grid-template-columns: repeat(3, 1fr);
   }
+  
+  .section {
+    padding: 80px 0;
+  }
 }
 
-/* Style spécifique pour WhatsApp si nécessaire */
-.contact-item .fa-whatsapp {
-    color: #25D366; /* Vert WhatsApp */
-}
-
-.footer-social .fa-whatsapp {
-    color: #25D366; /* Vert WhatsApp */
+/* Désactiver les animations pendant le redimensionnement */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
 }
