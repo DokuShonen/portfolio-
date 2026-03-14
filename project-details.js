@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Application de gestion immobilière",
             subtitle: "Développement Full-Stack",
             description: "Application web pour la gestion des biens immobiliers avec une interface utilisateur intuitive. J'ai utilisé du Python, HTML/CSS et JavaScript pour le front-end et un backend SQL pour la gestion des données.",
-            technologies: ["JavaScript", "Python", "SQL", "Flutter/Dart", "HTML/CSS"],
+            technologies: ["JavaScript", "Python", "SQL","HTML/CSS"],
             images: [
                 "images/projets/immo/acceuil.png",
                 "images/projets/immo/admin.png",
@@ -63,7 +63,57 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             links: {
                 github: "https://github.com/DokuShonen/immo.git",
-                live: "https://immobilier-exemple.com"
+                //live: "https://immobilier-exemple.com"
+            }
+        },
+        '5': {
+            title: "Site de presentation commerciale",
+            subtitle: "Développement Frontend",
+            description: "Site web pour la promotion commercial de fariflore avec une interface utilisateur intuitive. J'ai utilisé du HTML/CSS et JavaScript pour le developpement.",
+            technologies: ["JavaScript", "HTML/CSS"],
+            images: [
+                "images/projets/fariflore/aacc.png",
+                "images/projets/fariflore/cat.png",
+                "images/projets/fariflore/agent.png",
+                "images/projets/fariflore/prest.png",
+                "images/projets/fariflore/vid.png"
+            ],
+            links: {
+                github: "https://github.com/DokuShonen/fariflore.git",
+                live: "https://fariflore-ymer.vercel.app/"
+            }
+        },
+        '6': {
+            title: "Site de presentation de photos",
+            subtitle: "Développement Frontend",
+            description: "ASite de presentation d'activite etudiante avec une interface utilisateur intuitive et une animation. J'ai utilisé du HTML/CSS et JavaScript pour le front-end",
+            technologies: ["JavaScript","HTML/CSS"],
+            images: [
+                "images/projets/ITpic/gal.png",
+                /*"images/projets/ITpic/admin.png",
+                "images/projets/ITpic/agent.png",
+                "images/projets/ITpic/bailleur.png",
+                "images/projets/ITpic/client.png"*/
+            ],
+            links: {
+                github: "https://github.com/DokuShonen/it-pictures.git",
+                live: "https://it-pictures.vercel.app/"
+            }
+        },
+        '7': {
+            title: "Curriculum Vitae",
+            subtitle: "Développement Frontend",
+            description: "Site retracant mon parcourt scolaire, academique et professionel et presentant mes competences. J'ai utilisé du Python, HTML/CSS et JavaScript pour le front-end et un backend SQL pour la gestion des données.",
+            technologies: ["HTML/CSS"],
+            images: [
+                "images/projets/cv/cv.png",
+                //"images/projets/cv/admin.png"
+            ],
+            links: {
+                github: "https://github.com/DokuShonen/cvfr.git",
+                 github: "https://github.com/DokuShonen/cveng.git",
+                live: "https://cvfr.netlify.app/",
+                live: "https://cveng.netlify.app/"
             }
         }
     };
