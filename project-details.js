@@ -115,6 +115,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 live: "https://cvfr.netlify.app/",
                 live: "https://cveng.netlify.app/"
             }
+        },
+
+        '8': {
+            title: "Manabar",
+            subtitle: "Développement python/Django",
+            description: "Maquis Manager Web est une application de gestion de stock et de ventes conçue spécifiquement pour le secteur de la restauration et des débits de boisson.Le projet répond à une problématique majeure : la sécurisation des revenus . Grâce à un algorithme de détection d'écarts entre le stock théorique (logiciel) et le stock physique (comptage réel), le logiciel identifie immédiatement les boissons manquantes et calcule la perte financière associée en FCFA.",
+            technologies: ["Django 6.0, PostgreSQL, Bootstrap 5, WhiteNoise"],
+            images: [
+                "images/projets/manabar/caisse.png",
+                "images/projets/manabar/inventaire.png",
+                "images/projets/manabar/historique.png",
+                "images/projets/manabar/stock.png",
+                "images/projets/manabar/prod.png",
+                "images/projets/manabar/01.png",
+                "images/projets/manabar/02.png",
+                "images/projets/manabar/03.png"
+
+            ],
+            links: {
+                github: "https://github.com/DokuShonen/Manabar_linux.git",
+                github: "https://github.com/DokuShonen/manabar_win.git",
+                github: "https://github.com/DokuShonen/manabar_web.git",
+                live: "#"
+            }
         }
     };
     
