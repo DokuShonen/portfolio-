@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
             links: {
                 github: "https://github.com/DokuShonen/cvfr.git",
                  github: "https://github.com/DokuShonen/cveng.git",
-                live: "https://cvfr.netlify.app/",
-                live: "https://cveng.netlify.app/"
+                live: "https://cv-fr.vercel.app/",
+                live: "https://cveng.vercel.app/"
             }
         },
 
