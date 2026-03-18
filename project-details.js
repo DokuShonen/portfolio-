@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 github: "https://github.com/DokuShonen/Manabar_linux.git",
                 github: "https://github.com/DokuShonen/manabar_win.git",
                 github: "https://github.com/DokuShonen/manabar_web.git",
-                live: "#"
+                live: "https://suzuya.pythonanywhere.com/"
             }
         }
     };
