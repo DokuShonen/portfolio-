@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             links: {
                 github: "https://github.com/DokuShonen/fariflore.git",
-                live: "https://fariflore-ymer.vercel.app/"
+                live: "https://fariflore.vercel.app/"
             }
         },
        
