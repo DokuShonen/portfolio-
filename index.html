@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | KINDA Ulrich WENDSONGDE - Ingénieur Informatique</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230d1117'/%3E%3Ctext x='50' y='72' font-family='monospace' font-size='52' font-weight='bold' fill='%2300ff88' text-anchor='middle'%3E_/%3C/text%3E%3C/svg%3E">
+    <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+0lEQVRYhe2WMQ7CMAxFnwMkFm7AwhW4AQdgYeMGHICFjRtwABY2bsABWNi4AQdgYeMGHICFjRtwABa2dAMWpEhR2qRO1C9Zie3E/5/jpE1RFEVRFEVRFEVRlP/EA9gCJ+AB3IFW/LsBO2AOtL8Q0AIH4Aq8gDfQZ/QW7sBZ5M6B5hMBR+ApNn8LgUzOQkQt4Cw2eQN9QcBd5D6AuhBwE7lvYFQIuIrcDzAuBFxE7gcICgFnkfsB4kLASeR+gLQQcBS5H2BSCDiI3A8wLQQcRO4HmBUC9iL3A8wLAXuR+wEWhYBf5wLzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQkVRFEVRFEVRFEX5S97JpVfRutTkLAAAAABJRU5ErkJggg==">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Cursor Trail -->
+    <div id="cursor-trail"></div>
+
+    <!-- Floating Code Snippets -->
+    <div id="floating-code" aria-hidden="true"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">UW</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active" data-text="Accueil">Accueil</a></li>
+                <li><a href="#about" class="nav-link" data-text="À propos">À propos</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Compétences">Compétences</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projets">Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-terminal-tag">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-path">~/ulrich-wendsongde</span>
+                    </div>
+                    <p class="hero-greeting reveal-up">
+                        <span class="code-comment">// Salut, je suis</span>
+                    </p>
+                    <h1 class="hero-title">
+                        <span class="title-line reveal-up" style="--delay: 0.1s">KINDA Ulrich</span>
+                        <span class="title-line accent reveal-up" style="--delay: 0.2s">WENDSONGDE</span>
+                    </h1>
+                    <div class="hero-role reveal-up" style="--delay: 0.3s">
+                        <span class="code-keyword">const</span>
+                        <span class="hero-role-name" id="typingRole"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-description reveal-up" style="--delay: 0.4s">
+                        Ingénieur en Technologie du Génie Informatique, passionné par le développement
+                        de solutions technologiques innovantes et performantes.
+                    </p>
+                    <div class="hero-buttons reveal-up" style="--delay: 0.5s">
+                        <a href="#projects" class="btn btn-primary magnetic">
+                            <span class="btn-icon"><i class="fas fa-code"></i></span>
+                            <span>Voir mes projets</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary magnetic">
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            <span>Me contacter</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats reveal-up" style="--delay: 0.6s">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="7">0</span>
+                            <span class="stat-label">Projets</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Années d'étude</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-up" style="--delay: 0.3s">
+                    <div class="code-window">
+                        <div class="code-window-bar">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="window-filename">developer.ts</span>
+                        </div>
+                        <pre class="code-content"><code><span class="code-line"><span class="code-keyword">interface</span> <span class="code-type">Developer</span> {</span>
+<span class="code-line">  <span class="code-prop">name</span>: <span class="code-string">"KINDA Ulrich WENDSONGDE"</span>;</span>
+<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Ingénieur en Technologie du Génie Informatique"</span>;</span>
+<span class="code-line">  <span class="code-prop">university</span>: <span class="code-string">"Aube Nouvelle"</span>;</span>
+<span class="code-line">  <span class="code-prop">passions</span>: <span class="code-type">string[]</span>;</span>
+<span class="code-line">}</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-keyword">const</span> <span class="code-var">ulrich</span>: <span class="code-type">Developer</span> = {</span>
+<span class="code-line">  <span class="code-prop">name</span>: <span class="code-string">"KINDA Ulrich WENDSONGDE"</span>,</span>
+<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Ingénieur en TGI"</span>,</span>
+<span class="code-line">  <span class="code-prop">university</span>: <span class="code-string">"Aube Nouvelle"</span>,</span>
+<span class="code-line">  <span class="code-prop">passions</span>: [</span>
+<span class="code-line">    <span class="code-string">"web-dev"</span>,</span>
+<span class="code-line">    <span class="code-string">"system-admin"</span>,</span>
+<span class="code-line">    <span class="code-string">"databases"</span>,</span>
+<span class="code-line">    <span class="code-string">"innovation"</span></span>
+<span class="code-line">  ],</span>
+<span class="code-line">};</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// Build something amazing 🚀</span></span>
+<span class="code-line"><span class="code-func">buildFuture</span>(<span class="code-var">ulrich</span>);</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Défiler</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fas fa-user"></i> // À propos</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Qui suis-je ?</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card reveal-left">
+                        <div class="about-card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formation</h3>
+                        <p>Ingénieur en Technologie du Génie Informatique à l'Université Aube Nouvelle, je me spécialise dans le développement de solutions technologiques innovantes.</p>
+                    </div>
+                    <div class="about-card reveal-up">
+                        <div class="about-card-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Approche</h3>
+                        <p>Mon approche allie rigueur technique et créativité pour résoudre des problèmes complexes. Je cultive une détermination constante à progresser dans tous les domaines du développement.</p>
+                    </div>
+                    <div class="about-card reveal-right">
+                        <div class="about-card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Objectifs</h3>
+                        <p>Je recherche activement des opportunités professionnelles stimulantes où je pourrai mettre en application mes connaissances et continuer à développer mon expertise technique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Download Section -->
+        <section id="download-cv" class="section section-alt">
+            <div class="container">
+                <div class="cv-banner reveal-up">
+                    <div class="cv-banner-text">
+                        <span class="code-comment">// curriculum-vitae</span>
+                        <h2>Consultez mon CV</h2>
+                        <p>Retracez mon parcours académique et mes compétences techniques en détail.</p>
+                    </div>
+                    <div class="cv-banner-actions">
+                        <a href="https://cv-fr.vercel.app/" target="_blank" class="btn btn-primary magnetic">
+                            <span class="btn-icon"><i class="fas fa-language"></i></span>
+                            <span>Français</span>
+                        </a>
+                        <a href="https://cveng.vercel.app/" target="_blank" class="btn btn-secondary magnetic">
+                            <span class="btn-icon"><i class="fas fa-globe"></i></span>
+                            <span>English</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fas fa-terminal"></i> // Compétences</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Mes technologies</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programmation -->
+                    <div class="skill-card reveal-up" style="--delay: 0s">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+                            <h3>Programmation & Web</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="html-css">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML/CSS</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="js">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="php">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="cpp">
+                                <i class="fas fa-file-code"></i>
+                                <span>C/C++</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="csharp">
+                                <i class="fas fa-terminal"></i>
+                                <span>C#</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="angular">
+                                <i class="fab fa-angular"></i>
+                                <span>Angular</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="springboot">
+                                <i class="fas fa-leaf"></i>
+                                <span>Spring Boot</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bases de données -->
+                    <div class="skill-card reveal-up" style="--delay: 0.1s">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+                            <h3>Bases de données</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="mysql">
+                                <i class="fas fa-server"></i>
+                                <span>MySQL</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="oracle">
+                                <i class="fas fa-database"></i>
+                                <span>Oracle</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="nosql">
+                                <i class="fas fa-layer-group"></i>
+                                <span>NoSQL</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outils & Systèmes -->
+                    <div class="skill-card reveal-up" style="--delay: 0.2s">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fas fa-wrench"></i></div>
+                            <h3>Outils & Systèmes</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="linux">
+                                <i class="fab fa-linux"></i>
+                                <span>Linux</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="windows">
+                                <i class="fab fa-windows"></i>
+                                <span>Windows</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maintenance -->
+                    <div class="skill-card reveal-up" style="--delay: 0.3s">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+                            <h3>Maintenance</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="os-install">
+                                <i class="fas fa-download"></i>
+                                <span>Installation d'OS</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="debug">
+                                <i class="fas fa-bug"></i>
+                                <span>Dépannage</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bureautique -->
+                    <div class="skill-card reveal-up" style="--delay: 0.4s">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fas fa-file-alt"></i></div>
+                            <h3>Bureautique</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="word">
+                                <i class="fas fa-file-word"></i>
+                                <span>Word</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="excel">
+                                <i class="fas fa-file-excel"></i>
+                                <span>Excel</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="ppt">
+                                <i class="fas fa-file-powerpoint"></i>
+                                <span>PowerPoint</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fas fa-folder-open"></i> // Projets</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Mes réalisations</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                    <p class="section-subtitle reveal-up" style="--delay: 0.2s">Projets personnels démontrant mes compétences techniques</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projet 1 -->
+                    <article class="project-card reveal-up" style="--delay: 0s">
+                        <div class="project-image">
+                            <img src="images/projets/archiburkina/acceuil.png" alt="ArchiBurkina" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/archiburkina.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://archiburkina.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#01</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>ArchiBurkina</h3>
+                            <p>Site vitrine responsive pour une entreprise d'architecture.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="projet-details.html?id=1" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 -->
+                    <article class="project-card reveal-up" style="--delay: 0.08s">
+                        <div class="project-image">
+                            <img src="images/projets/fasoluxe/acceuil.png" alt="FasoLuxe" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/fasoluxe.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="http://fasoluxe.atwebpages.com/public" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#02</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>FasoLuxe HÔTEL</h3>
+                            <p>Solution complète de gestion hôtelière avec interface admin et client.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="projet-details.html?id=2" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 -->
+                    <article class="project-card reveal-up" style="--delay: 0.16s">
+                        <div class="project-image">
+                            <img src="images/projets/alpha/acceuil.png" alt="Alpha" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/alpha.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="http://alphaitiot.atwebpages.com" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#03</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>Alpha</h3>
+                            <p>Site dynamique sur l'IA et les objets connectés avec commentaires.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>SQL</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="projet-details.html?id=3" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 4 -->
+                    <article class="project-card reveal-up" style="--delay: 0s">
+                        <div class="project-image">
+                            <img src="images/projets/immo/acceuil.png" alt="IMMO" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/immo.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://site-immobilier.com" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#04</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>IMMO</h3>
+                            <p>Solution multi-plateforme avec backend Python et mobile Flutter.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Flutter</span>
+                            </div>
+                            <a href="projet-details.html?id=4" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 5 -->
+                    <article class="project-card reveal-up" style="--delay: 0.08s">
+                        <div class="project-image">
+                            <img src="images/projets/fariflore/acc.png" alt="Fariflore" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/fariflore.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://fariflore.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#05</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>Fariflore</h3>
+                            <p>Site de présentation d'un commerce d'organisation événementielle.</p>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="projet-details.html?id=5" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 6 -->
+                    <article class="project-card reveal-up" style="--delay: 0.16s">
+                        <div class="project-image">
+                            <img src="images/projets/cv/cv.png" alt="CV" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/cvfr.git" target="_blank" class="project-action magnetic" aria-label="GitHub FR">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://cv-fr.vercel.app/" target="_blank" class="project-action magnetic" aria-label="CV Français">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#06</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>Curriculum Vitae</h3>
+                            <p>CV interactif retracant mon parcours et compétences.</p>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="projet-details.html?id=6" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 7 -->
+                    <article class="project-card project-card-featured reveal-up" style="--delay: 0s">
+                        <div class="project-image">
+                            <img src="images/projets/manabar/01.png" alt="Manabar" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/Manabar_linux" target="_blank" class="project-action magnetic" aria-label="GitHub Linux">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://suzuya.pythonanywhere.com/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#07</span>
+                                <span class="project-category project-category-featured">Featured</span>
+                            </div>
+                            <h3>Maquis Manager</h3>
+                            <p>Application complète de gestion de stock et ventes pour la restauration avec détection d'écarts automatique.</p>
+                            <div class="project-tech">
+                                <span>Django 6.0</span>
+                                <span>PostgreSQL</span>
+                                <span>Bootstrap 5</span>
+                            </div>
+                            <a href="projet-details.html?id=7" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fas fa-envelope"></i> // Contact</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Me contacter</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                    <p class="section-subtitle reveal-up" style="--delay: 0.2s">Disponible pour des opportunités et collaborations</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item reveal-left" style="--delay: 0s">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:kindaulrich1@gmail.com">kindaulrich1@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-left" style="--delay: 0.08s">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Téléphone</span>
+                                <span>+226 54 74 84 44</span>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-left" style="--delay: 0.16s">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/22673345912" target="_blank">+226 73 34 59 12</a>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-left" style="--delay: 0.24s">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">/in/ulrich-wendsongde</a>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-left" style="--delay: 0.32s">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <a href="https://github.com/DokuShonen" target="_blank">/DokuShonen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper reveal-right">
+                        <div class="contact-form-header">
+                            <span class="code-comment">// send-message.ts</span>
+                        </div>
+                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgvlovnq" method="POST">
+                            <div class="form-group">
+                                <label for="name"><span class="code-keyword">const</span> name = </label>
+                                <input type="text" id="name" name="name" placeholder='"Votre nom"' required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><span class="code-keyword">const</span> email = </label>
+                                <input type="email" id="email" name="email" placeholder='"votre@email.com"' required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><span class="code-keyword">const</span> message = </label>
+                                <textarea id="message" name="message" rows="4" placeholder='"Votre message..."' required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit magnetic">
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                <span>Envoyer</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">UW</span>
+                        <span class="logo-bracket">/&gt;
+                    </span>
+                    </a>
+                    <p>Ingénieur en Technologie du Génie Informatique passionné par l'innovation technologique.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Réseaux</h4>
+                    <div class="social-icons">
+                        <a href="mailto:kindaulrich1@gmail.com" class="magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+22654748444" class="magnetic" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+                        <a href="https://wa.me/22673345912" target="_blank" class="magnetic" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/DokuShonen" target="_blank" class="magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-code">
+                    <span class="code-comment">/*</span>
+                    &copy; 2026 KINDA Ulrich WENDSONGDE
+                    <span class="code-comment">*/</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
