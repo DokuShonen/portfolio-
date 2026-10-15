@@ -174,6 +174,152 @@
           .project-links { flex-direction: column; }
           .project-links a { justify-content: center; }
         }
+
+        /* ===== Fiche projet façon paquet Debian (revisite) ===== */
+        .pkg-breadcrumb {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            margin: -1.5rem 0 2rem;
+        }
+        .pkg-breadcrumb .dim { color: var(--accent); }
+        .pkg-breadcrumb .path { color: var(--blue); }
+        .pkg-breadcrumb::after {
+            content: " ▊";
+            color: var(--accent);
+            animation: pkg-caret 1s steps(1) infinite;
+        }
+        @keyframes pkg-caret { 50% { opacity: 0; } }
+
+        /* Galerie : compteur + flèches */
+        .project-gallery { position: relative; }
+        .gallery-counter {
+            position: absolute;
+            top: 0.9rem; right: 1.1rem;
+            z-index: 3;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+            background: rgba(10, 14, 23, 0.75);
+            border: 1px solid var(--border-accent);
+            border-radius: 6px;
+            padding: 0.25rem 0.6rem;
+            backdrop-filter: blur(4px);
+        }
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            width: 42px; height: 42px;
+            display: grid; place-items: center;
+            border-radius: 10px;
+            background: rgba(10, 14, 23, 0.72);
+            border: 1px solid var(--border-accent);
+            color: var(--accent);
+            font-size: 0.9rem;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+            transition: all 0.25s var(--ease-out);
+            opacity: 0;
+        }
+        .project-gallery:hover .gallery-arrow,
+        .gallery-arrow:focus-visible { opacity: 1; }
+        .gallery-arrow.prev { left: 1rem; }
+        .gallery-arrow.next { right: 1rem; }
+        .gallery-arrow:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.25);
+            transform: translateY(-50%) scale(1.08);
+        }
+        /* La miniature active est marquée, les autres légèrement estompées */
+        .thumbnail { opacity: 0.55; }
+        .thumbnail.active { opacity: 1; }
+
+        /* Liens projet façon boutons de paquet */
+        .pkg-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.35rem;
+            background: var(--bg-card);
+            color: var(--accent);
+            border: 1px solid var(--border-accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.3s var(--ease-out);
+        }
+        .pkg-link:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-color: var(--accent);
+            box-shadow: 0 0 22px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+        /* Le lien "live" est mis en avant */
+        a.pkg-link[href^="http"]:has(.fa-external-link-alt),
+        .project-links a:last-child { border-color: rgba(0, 191, 255, 0.45); }
+
+        /* Pager précédent / suivant */
+        .project-pager {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .pager-link {
+            flex: 1;
+            max-width: 46%;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s var(--ease-out);
+        }
+        .pager-link.next { flex-direction: row-reverse; text-align: right; margin-left: auto; }
+        .pager-link:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 18px rgba(0, 255, 136, 0.05);
+        }
+        .pager-arrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        .pager-label {
+            display: flex; flex-direction: column;
+            color: var(--text-primary);
+            font-size: 0.85rem; font-weight: 600;
+        }
+        .pager-label small {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            margin-bottom: 0.15rem;
+        }
+        .pager-empty { flex: 1; max-width: 46%; }
+
+        /* État paquet introuvable */
+        .pkg-error {
+            text-align: center;
+            padding: 6rem 1rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .pkg-error-cmd { color: var(--text-secondary); font-size: 0.85rem; }
+        .pkg-error-msg {
+            margin-top: 1rem;
+            color: #ff7b72;
+            font-size: 1.05rem;
+        }
+        .pkg-error-msg b { color: var(--text-primary); }
     </style>
 </head>
 <body>
@@ -231,46 +377,88 @@
 
     <footer class="main-footer">
         <div class="container">
+            <!-- Barre de statut façon htop/systemctl -->
+            <div class="footer-status" aria-hidden="true">
+                <span class="fs-item"><span class="fs-dot"></span>system online</span>
+                <span class="fs-item">load avg: 0.42 0.31 0.28</span>
+                <span class="fs-item" data-fs-uptime>uptime: --</span>
+                <span class="fs-item">mem: 6144/32768 MiB</span>
+                <span class="fs-item fs-right">tty1 · zsh</span>
+            </div>
+
             <div class="footer-content">
+                <!-- Colonne 1 : bannière ASCII + description -->
                 <div class="footer-info">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-text">UW</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </a>
-                    <p>Ingénieur en Technologie du Génie Informatique passionné par l'innovation technologique.</p>
+                    <pre class="footer-ascii" aria-hidden="true"> _   _ ____  _
+| | | |  _ \| |
+| |_| | | | | |
+|  _  | |_| | |___
+|_| |_|____/|_____|</pre>
+                    <p class="footer-tagline"><span class="code-comment">// Ingénieur génie informatique — code propre, systèmes fiables.</span></p>
                 </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html#about">À propos</a></li>
-                        <li><a href="index.html#skills">Compétences</a></li>
-                        <li><a href="index.html#projects">Projets</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Colonne 2 : navigation en commandes -->
+                <nav class="footer-links" aria-label="Navigation de pied de page">
+                    <h4><i class="fas fa-terminal"></i> cd ..</h4>
+                    <ul class="cmd-list">
+                        <li><a href="index.html#hero"><span class="prompt">$</span>cd accueil</a></li>
+                        <li><a href="index.html#about"><span class="prompt">$</span>cd a-propos</a></li>
+                        <li><a href="index.html#skills"><span class="prompt">$</span>cd competences</a></li>
+                        <li><a href="index.html#projects"><span class="prompt">$</span>cd projets</a></li>
+                        <li><a href="index.html#contact"><span class="prompt">$</span>cd contact</a></li>
+                        <li><a href="en.html"><span class="prompt">$</span>export LANG=en_US</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Colonne 3 : services (réseaux) -->
+                <div class="footer-social">
+                    <h4><i class="fas fa-network-wired"></i> systemctl list-units</h4>
+                    <ul class="svc-list">
+                        <li>
+                            <a href="mailto:kindaulrich1@gmail.com" aria-label="Email">
+                                <span class="svc-name"><i class="fas fa-envelope"></i> mail.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/22673345912" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <span class="svc-name"><i class="fab fa-whatsapp"></i> whatsapp.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <span class="svc-name"><i class="fab fa-github"></i> github.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <span class="svc-name"><i class="fab fa-linkedin"></i> linkedin.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h4>Réseaux</h4>
-                    <div class="social-icons">
-                        <a href="mailto:kindaulrich1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+22654748444" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
-                        <a href="https://wa.me/22673345912" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://github.com/DokuShonen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
             </div>
+
+            <!-- Ligne de prompt finale -->
             <div class="footer-bottom">
-                <p class="footer-code">
-                    <span class="code-comment">/*</span>
-                    &copy; 2026 KINDA Ulrich WENDSONGDE
-                    <span class="code-comment">*/</span>
+                <p class="footer-prompt">
+                    <span class="fp-user">ulrich@portfolio</span>:<span class="fp-path">~/public</span>$
+                    echo "&copy; 2026 KINDA Ulrich WENDSONGDE — built with ☕ &amp; curiosity"
+                    <span class="fp-caret">▊</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="project-details.js"></script>
+    <script src="boot.js"></script>
+    <script src="ux.js"></script>
+    <script src="linux-ui.js"></script>
+    <script src="wow.js"></script>
+    <script src="ambiance.js"></script>
     <script>
         // Mobile menu for detail page
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

@@ -13,6 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Partage social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KINDA Ulrich WENDSONGDE - Ingénieur Génie Informatique">
+    <meta property="og:description" content="Portfolio de Ulrich WENDSONGDE : développement web full-stack, Python/Django, systèmes et bases de données.">
+    <meta property="og:image" content="https://kindaulrich.vercel.app/images/projets/manabar/01_thumb.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KINDA Ulrich WENDSONGDE - Ingénieur Génie Informatique">
+    <meta name="twitter:description" content="Développement web full-stack, Python/Django, systèmes et bases de données.">
+    <!-- Données structurées (Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "KINDA Ulrich WENDSONGDE",
+      "jobTitle": "Ingénieur en Technologie du Génie Informatique",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Université Aube Nouvelle" },
+      "knowsAbout": ["Développement Web", "Python", "Django", "PHP", "SQL", "Linux", "Systèmes"],
+      "url": "https://kindaulrich.vercel.app/",
+      "sameAs": [
+        "https://github.com/DokuShonen",
+        "https://www.linkedin.com/in/ulrich-kinda-0766b6289"
+      ]
+    }
+    </script>
+    <meta name="theme-color" content="#00ff88">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <!-- Matrix Rain Canvas Background -->
@@ -30,22 +56,26 @@
     <!-- Navigation -->
     <nav class="main-nav" id="mainNav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
+            <a href="#hero" class="nav-logo" aria-label="Retour à l'accueil">
                 <span class="logo-bracket">&lt;</span>
                 <span class="logo-text">UW</span>
                 <span class="logo-bracket">/&gt;</span>
             </a>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#hero" class="nav-link active" data-text="Accueil">Accueil</a></li>
-                <li><a href="#about" class="nav-link" data-text="À propos">À propos</a></li>
-                <li><a href="#skills" class="nav-link" data-text="Compétences">Compétences</a></li>
-                <li><a href="#projects" class="nav-link" data-text="Projets">Projets</a></li>
-                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+                <li><a href="#hero" class="nav-link active" data-text="Accueil"><span class="ws-number">1</span>Accueil</a></li>
+                <li><a href="#about" class="nav-link" data-text="À propos"><span class="ws-number">2</span>À propos</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Compétences"><span class="ws-number">3</span>Compétences</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projets"><span class="ws-number">4</span>Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact"><span class="ws-number">5</span>Contact</a></li>
             </ul>
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="nav-right">
+                <a href="en.html" class="lang-pill" title="Switch to English">EN</a>
+                <div class="panel-clock"><i class="fas fa-server"></i> <span data-clock>--:--</span></div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -90,12 +120,12 @@
                     </div>
                     <div class="hero-stats reveal-up" style="--delay: 0.6s">
                         <div class="stat-item">
-                            <span class="stat-number" data-count="7">0</span>
+                            <span class="stat-number" data-count="8">0</span>
                             <span class="stat-label">Projets</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-number" data-count="10">0</span>
                             <span class="stat-label">Technologies</span>
                         </div>
                         <div class="stat-divider"></div>
@@ -134,7 +164,7 @@
 <span class="code-line">  ],</span>
 <span class="code-line">};</span>
 <span class="code-line"></span>
-<span class="code-line"><span class="code-comment">// Build something amazing 🚀</span></span>
+<span class="code-line"><span class="code-comment">// Build something amazing </span></span>
 <span class="code-line"><span class="code-func">buildFuture</span>(<span class="code-var">ulrich</span>);</span></code></pre>
                     </div>
                 </div>
@@ -383,7 +413,7 @@
                     <!-- Projet 1 -->
                     <article class="project-card reveal-up" style="--delay: 0s">
                         <div class="project-image">
-                            <img src="images/projets/archiburkina/acceuil.png" alt="ArchiBurkina" loading="lazy">
+                            <img src="images/projets/archiburkina/acceuil_thumb.webp" alt="ArchiBurkina" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/archiburkina.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
@@ -407,7 +437,7 @@
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=1" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end</span></div><a href="projet-details.html?id=1" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -416,7 +446,7 @@
                     <!-- Projet 2 -->
                     <article class="project-card reveal-up" style="--delay: 0.08s">
                         <div class="project-image">
-                            <img src="images/projets/fasoluxe/acceuil.png" alt="FasoLuxe" loading="lazy">
+                            <img src="images/projets/fasoluxe/acceuil_thumb.webp" alt="FasoLuxe" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/fasoluxe.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
@@ -440,7 +470,7 @@
                                 <span>MySQL</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=2" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · MySQL</span></div><a href="projet-details.html?id=2" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -449,7 +479,7 @@
                     <!-- Projet 3 -->
                     <article class="project-card reveal-up" style="--delay: 0.16s">
                         <div class="project-image">
-                            <img src="images/projets/alpha/acceuil.png" alt="Alpha" loading="lazy">
+                            <img src="images/projets/alpha/acceuil_thumb.webp" alt="Alpha" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/alpha.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
@@ -473,7 +503,7 @@
                                 <span>SQL</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=3" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · API REST</span></div><a href="projet-details.html?id=3" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -482,7 +512,7 @@
                     <!-- Projet 4 -->
                     <article class="project-card reveal-up" style="--delay: 0s">
                         <div class="project-image">
-                            <img src="images/projets/immo/acceuil.png" alt="IMMO" loading="lazy">
+                            <img src="images/projets/immo/acceuil_thumb.webp" alt="IMMO" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/immo.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
@@ -506,7 +536,7 @@
                                 <span>SQL</span>
                                 <span>Flutter</span>
                             </div>
-                            <a href="projet-details.html?id=4" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · SQL</span></div><a href="projet-details.html?id=4" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -515,7 +545,7 @@
                     <!-- Projet 5 -->
                     <article class="project-card reveal-up" style="--delay: 0.08s">
                         <div class="project-image">
-                            <img src="images/projets/fariflore/acc.png" alt="Fariflore" loading="lazy">
+                            <img src="images/projets/fariflore/acc_thumb.webp" alt="Fariflore" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/fariflore.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
@@ -538,7 +568,7 @@
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=5" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end</span></div><a href="projet-details.html?id=5" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -547,7 +577,7 @@
                     <!-- Projet 6 -->
                     <article class="project-card reveal-up" style="--delay: 0.16s">
                         <div class="project-image">
-                            <img src="images/projets/cv/cv.png" alt="CV" loading="lazy">
+                            <img src="images/projets/cv/cv_thumb.webp" alt="CV" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/cvfr.git" target="_blank" class="project-action magnetic" aria-label="GitHub FR">
@@ -570,7 +600,7 @@
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=6" class="project-link">
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end · FR/EN</span></div><a href="projet-details.html?id=6" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -579,7 +609,7 @@
                     <!-- Projet 7 -->
                     <article class="project-card project-card-featured reveal-up" style="--delay: 0s">
                         <div class="project-image">
-                            <img src="images/projets/manabar/01.png" alt="Manabar" loading="lazy">
+                            <img src="images/projets/manabar/01_thumb.webp" alt="Manabar" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="https://github.com/DokuShonen/Manabar_linux" target="_blank" class="project-action magnetic" aria-label="GitHub Linux">
@@ -603,7 +633,7 @@
                                 <span>PostgreSQL</span>
                                 <span>Bootstrap 5</span>
                             </div>
-                            <a href="projet-details.html?id=7" class="project-link">
+                            <div class="project-stat"><span>drwxrwxrwx</span><span>featured · Django 6.0</span></div><a href="projet-details.html?id=7" class="project-link">
                                 Voir les détails <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -690,48 +720,113 @@
     </main>
 
     <!-- Footer -->
+
+    <!-- Section GitHub live -->
+    <section id="github" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up"><i class="fab fa-github"></i> // git remote</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Activité GitHub</h2>
+                <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                <p class="section-subtitle reveal-up" style="--delay: 0.2s">Mes dépôts publics, en direct depuis l'API GitHub</p>
+            </div>
+            <div class="github-grid" id="githubGrid" aria-live="polite">
+                <div class="gh-loading">// git fetch en cours...</div>
+            </div>
+            <div class="gh-footer reveal-up">
+                <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
+                    <span class="btn-icon"><i class="fab fa-github"></i></span>
+                    <span>git clone DokuShonen --tous-mes-projets</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="main-footer">
         <div class="container">
+            <!-- Barre de statut façon htop/systemctl -->
+            <div class="footer-status" aria-hidden="true">
+                <span class="fs-item"><span class="fs-dot"></span>system online</span>
+                <span class="fs-item">load avg: 0.42 0.31 0.28</span>
+                <span class="fs-item" data-fs-uptime>uptime: --</span>
+                <span class="fs-item">mem: 6144/32768 MiB</span>
+                <span class="fs-item fs-right">tty1 · zsh</span>
+            </div>
+
             <div class="footer-content">
+                <!-- Colonne 1 : bannière ASCII + description -->
                 <div class="footer-info">
-                    <a href="#" class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-text">UW</span>
-                        <span class="logo-bracket">/&gt;
-                    </span>
-                    </a>
-                    <p>Ingénieur en Technologie du Génie Informatique passionné par l'innovation technologique.</p>
+                    <pre class="footer-ascii" aria-hidden="true"> _   _ ____  _
+| | | |  _ \| |
+| |_| | | | | |
+|  _  | |_| | |___
+|_| |_|____/|_____|</pre>
+                    <p class="footer-tagline"><span class="code-comment">// Ingénieur génie informatique — code propre, systèmes fiables.</span></p>
                 </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#skills">Compétences</a></li>
-                        <li><a href="#projects">Projets</a></li>
-                        <li><a href="#contact">Contact</a></li>
+
+                <!-- Colonne 2 : navigation en commandes -->
+                <nav class="footer-links" aria-label="Navigation de pied de page">
+                    <h4><i class="fas fa-terminal"></i> cd ..</h4>
+                    <ul class="cmd-list">
+                        <li><a href="#hero"><span class="prompt">$</span>cd accueil</a></li>
+                        <li><a href="#about"><span class="prompt">$</span>cd a-propos</a></li>
+                        <li><a href="#skills"><span class="prompt">$</span>cd competences</a></li>
+                        <li><a href="#projects"><span class="prompt">$</span>cd projets</a></li>
+                        <li><a href="#contact"><span class="prompt">$</span>cd contact</a></li>
+                        <li><a href="en.html"><span class="prompt">$</span>export LANG=en_US</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Colonne 3 : services (réseaux) -->
+                <div class="footer-social">
+                    <h4><i class="fas fa-network-wired"></i> systemctl list-units</h4>
+                    <ul class="svc-list">
+                        <li>
+                            <a href="mailto:kindaulrich1@gmail.com" aria-label="Email">
+                                <span class="svc-name"><i class="fas fa-envelope"></i> mail.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/22673345912" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <span class="svc-name"><i class="fab fa-whatsapp"></i> whatsapp.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <span class="svc-name"><i class="fab fa-github"></i> github.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <span class="svc-name"><i class="fab fa-linkedin"></i> linkedin.service</span>
+                                <span class="svc-state active">active</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h4>Réseaux</h4>
-                    <div class="social-icons">
-                        <a href="mailto:kindaulrich1@gmail.com" class="magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+22654748444" class="magnetic" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
-                        <a href="https://wa.me/22673345912" target="_blank" class="magnetic" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://github.com/DokuShonen" target="_blank" class="magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ulrich-kinda-0766b6289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
             </div>
+
+            <!-- Ligne de prompt finale -->
             <div class="footer-bottom">
-                <p class="footer-code">
-                    <span class="code-comment">/*</span>
-                    &copy; 2026 KINDA Ulrich WENDSONGDE
-                    <span class="code-comment">*/</span>
+                <p class="footer-prompt">
+                    <span class="fp-user">ulrich@portfolio</span>:<span class="fp-path">~/public</span>$
+                    echo "&copy; 2026 KINDA Ulrich WENDSONGDE — built with ☕ &amp; curiosity"
+                    <span class="fp-caret">▊</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="boot.js"></script>
+    <script src="ux.js"></script>
+    <script src="linux-ui.js"></script>
+    <script src="wow.js"></script>
+    <script src="ambiance.js"></script>
+    <script src="filters.js"></script>
+    <script src="github.js"></script>
 </body>
 </html>

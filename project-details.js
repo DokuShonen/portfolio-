@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
-    
     const projectsData = {
         '1': {
             title: "Site statique d'entreprise d'architecture",
@@ -9,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Terre & Esprit est un site web immersif qui célèbre la richesse de l'architecture du Burkina Faso. Il sert de vitrine éducative et esthétique en explorant l'histoire, les matériaux traditionnels comme le banco, et les œuvres emblématiques du pays. Le projet met particulièrement en lumière les artisans locaux et la vision moderne de l'architecte de renommée mondiale, Diébédo Francis Kéré. Entièrement responsive, son design s'inspire des couleurs chaudes du Sahel pour offrir une expérience authentique.",
             technologies: ["HTML/CSS", "JavaScript"],
             images: [
-                "images/projets/archiburkina/acceuil.png",
-                "images/projets/archiburkina/artisans.png",
-                "images/projets/archiburkina/oeuvres.png",
-                "images/projets/archiburkina/histoire.png"
+                "images/projets/archiburkina/acceuil.webp",
+                "images/projets/archiburkina/artisans.webp",
+                "images/projets/archiburkina/oeuvres.webp",
+                "images/projets/archiburkina/histoire.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/archiburkina.git",
-                live: "https://archiburkina.vercel.app/"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/archiburkina.git", label: "Code source" },
+                { type: "live", url: "https://archiburkina.vercel.app/", label: "Voir en ligne" }
+            ]
         },
         '2': {
             title: "Application de gestion d'hôtel",
@@ -25,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Application web complète pour la gestion des réservations, chambres et clients d'un hôtel. J'ai développé l'interface administrateur, le système de réservation et le module de paiement.",
             technologies: ["PHP", "SQL", "HTML/CSS"],
             images: [
-                "images/projets/fasoluxe/acceuil.png",
-                "images/projets/fasoluxe/reserve.png",
-                "images/projets/fasoluxe/acceuil1.png",
-                "images/projets/fasoluxe/hotel.png"
+                "images/projets/fasoluxe/acceuil.webp",
+                "images/projets/fasoluxe/reserve.webp",
+                "images/projets/fasoluxe/acceuil1.webp",
+                "images/projets/fasoluxe/hotel.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/fasoluxe.git",
-                live: "http://fasoluxe.atwebpages.com/public"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/fasoluxe.git", label: "Code source" },
+                { type: "live", url: "http://fasoluxe.atwebpages.com/public", label: "Voir en ligne" }
+            ]
         },
         '3': {
             title: "Site dynamique sur l'IA et les IoT",
@@ -41,158 +40,189 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Développement d'un site éducatif sur l'intelligence artificielle et les objets connectés. Le site comprend un système d'articles dynamiques, une section de commentaires, et des démonstrations interactives. J'ai implémenté une API REST pour gérer le contenu et les interactions utilisateurs.",
             technologies: ["PHP", "SQL", "JavaScript", "HTML/CSS"],
             images: [
-                "images/projets/alpha/acceuil.png",
-                "images/projets/alpha/formulaire.png"
+                "images/projets/alpha/acceuil.webp",
+                "images/projets/alpha/formulaire.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/alpha.git",
-                live: "http://alphaitiot.atwebpages.com"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/alpha.git", label: "Code source" },
+                { type: "live", url: "http://alphaitiot.atwebpages.com", label: "Voir en ligne" }
+            ]
         },
         '4': {
             title: "Application de gestion immobilière",
             subtitle: "Développement Full-Stack",
             description: "Application web pour la gestion des biens immobiliers avec une interface utilisateur intuitive. J'ai utilisé du Python, HTML/CSS et JavaScript pour le front-end et un backend SQL pour la gestion des données.",
-            technologies: ["JavaScript", "Python", "SQL","HTML/CSS"],
+            technologies: ["JavaScript", "Python", "SQL", "HTML/CSS"],
             images: [
-                "images/projets/immo/acceuil.png",
-                "images/projets/immo/admin.png",
-                "images/projets/immo/agent.png",
-                "images/projets/immo/bailleur.png",
-                "images/projets/immo/client.png"
+                "images/projets/immo/acceuil.webp",
+                "images/projets/immo/admin.webp",
+                "images/projets/immo/agent.webp",
+                "images/projets/immo/bailleur.webp",
+                "images/projets/immo/client.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/immo.git",
-                //live: "https://immobilier-exemple.com"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/immo.git", label: "Code source" }
+            ]
         },
         '5': {
-            title: "Site de presentation commerciale",
+            title: "Site de présentation commerciale",
             subtitle: "Développement Frontend",
-            description: "Site web pour la promotion commercial de fariflore avec une interface utilisateur intuitive. J'ai utilisé du HTML/CSS et JavaScript pour le developpement.",
+            description: "Site web pour la promotion commerciale de Fariflore avec une interface utilisateur intuitive. Développé en HTML/CSS et JavaScript.",
             technologies: ["JavaScript", "HTML/CSS"],
             images: [
-                "images/projets/fariflore/aacc.png",
-                "images/projets/fariflore/cat.png",
-                "images/projets/fariflore/agent.png",
-                "images/projets/fariflore/prest.png",
-                "images/projets/fariflore/vid.png"
+                "images/projets/fariflore/aacc.webp",
+                "images/projets/fariflore/cat.webp",
+                "images/projets/fariflore/agent.webp",
+                "images/projets/fariflore/prest.webp",
+                "images/projets/fariflore/vid.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/fariflore.git",
-                live: "https://fariflore.vercel.app/"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/fariflore.git", label: "Code source" },
+                { type: "live", url: "https://fariflore.vercel.app/", label: "Voir en ligne" }
+            ]
         },
-       
         '6': {
-            title: "Curriculum Vitae",
+            title: "Curriculum Vitae interactif",
             subtitle: "Développement Frontend",
-            description: "Site retracant mon parcourt scolaire, academique et professionel et presentant mes competences. J'ai utilisé du Python, HTML/CSS et JavaScript pour le front-end et un backend SQL pour la gestion des données.",
-            technologies: ["HTML/CSS"],
+            description: "Site retracant mon parcours scolaire, académique et professionnel et présentant mes compétences. Décliné en deux versions linguistiques (français et anglais).",
+            technologies: ["HTML/CSS", "JavaScript"],
             images: [
-                "images/projets/cv/cv.png",
-                //"images/projets/cv/admin.png"
+                "images/projets/cv/cv.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/cvfr.git",
-                 github: "https://github.com/DokuShonen/cveng.git",
-                live: "https://cv-fr.vercel.app/",
-                live: "https://cveng.vercel.app/"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/cvfr.git", label: "Source FR" },
+                { type: "github", url: "https://github.com/DokuShonen/cveng.git", label: "Source EN" },
+                { type: "live", url: "https://cv-fr.vercel.app/", label: "Version française" },
+                { type: "live", url: "https://cveng.vercel.app/", label: "English version" }
+            ]
         },
-
         '7': {
-            title: "Manabar",
-            subtitle: "Développement python/Django",
-            description: "Maquis Manager Web est une application de gestion de stock et de ventes conçue spécifiquement pour le secteur de la restauration et des débits de boisson.Le projet répond à une problématique majeure : la sécurisation des revenus . Grâce à un algorithme de détection d'écarts entre le stock théorique (logiciel) et le stock physique (comptage réel), le logiciel identifie immédiatement les boissons manquantes et calcule la perte financière associée en FCFA.",
-            technologies: ["Django 6.0, PostgreSQL, Bootstrap 5, WhiteNoise"],
+            title: "Maquis Manager (Manabar)",
+            subtitle: "Développement Python / Django",
+            description: "Maquis Manager Web est une application de gestion de stock et de ventes conçue spécifiquement pour le secteur de la restauration et des débits de boisson. Le projet répond à une problématique majeure : la sécurisation des revenus. Grâce à un algorithme de détection d'écarts entre le stock théorique (logiciel) et le stock physique (comptage réel), le logiciel identifie immédiatement les boissons manquantes et calcule la perte financière associée en FCFA.",
+            technologies: ["Django 6.0", "PostgreSQL", "Bootstrap 5", "WhiteNoise"],
             images: [
-                "images/projets/manabar/caisse.png",
-                "images/projets/manabar/inventaire.png",
-                "images/projets/manabar/historique.png",
-                "images/projets/manabar/stock.png",
-                "images/projets/manabar/prod.png",
-                "images/projets/manabar/01.png",
-                "images/projets/manabar/02.png",
-                "images/projets/manabar/03.png"
-
+                "images/projets/manabar/caisse.webp",
+                "images/projets/manabar/inventaire.webp",
+                "images/projets/manabar/historique.webp",
+                "images/projets/manabar/stock.webp",
+                "images/projets/manabar/prod.webp",
+                "images/projets/manabar/01.webp",
+                "images/projets/manabar/02.webp",
+                "images/projets/manabar/03.webp"
             ],
-            links: {
-                github: "https://github.com/DokuShonen/Manabar_linux.git",
-                github: "https://github.com/DokuShonen/manabar_win.git",
-                github: "https://github.com/DokuShonen/manabar_web.git",
-                live: "https://suzuya.pythonanywhere.com/"
-            }
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/manabar_web.git", label: "Source Web" },
+                { type: "github", url: "https://github.com/DokuShonen/Manabar_linux.git", label: "Source Linux" },
+                { type: "github", url: "https://github.com/DokuShonen/manabar_win.git", label: "Source Windows" },
+                { type: "live", url: "https://suzuya.pythonanywhere.com/", label: "Voir en ligne" }
+            ]
         }
     };
-    
     const project = projectsData[projectId];
-    
-    if (project) {
-        // Mise à jour des informations de base
-        document.getElementById('project-title').textContent = project.title;
-        document.getElementById('project-subtitle').textContent = project.subtitle;
-        document.getElementById('project-full-description').textContent = project.description;
-        
-        // Image principale
-        const mainImage = document.getElementById('main-project-image');
-        mainImage.src = project.images[0];
-        mainImage.alt = project.title;
-        
-        // Galerie d'images
-        const thumbnailsContainer = document.getElementById('project-thumbnails');
-        thumbnailsContainer.innerHTML = ''; // Nettoyage préalable
-        
-        project.images.forEach((image, index) => {
-            const img = document.createElement('img');
-            img.src = image;
-            img.alt = `Aperçu ${index + 1} du projet ${project.title}`;
-            img.className = 'thumbnail';
-            img.addEventListener('click', () => {
-                mainImage.src = image;
-                mainImage.alt = `Aperçu ${index + 1} du projet ${project.title}`;
-            });
-            thumbnailsContainer.appendChild(img);
-        });
-        
-        // Technologies
-        const techContainer = document.getElementById('project-techs');
-        techContainer.innerHTML = ''; // Nettoyage préalable
-        
-        project.technologies.forEach(tech => {
-            const span = document.createElement('span');
-            span.className = 'tech-badge';
-            span.textContent = tech;
-            techContainer.appendChild(span);
-        });
-        
-        // Liens externes
-        const linksContainer = document.querySelector('.project-links');
-        linksContainer.innerHTML = '';
-        
-        if (project.links.github) {
-            const githubLink = document.createElement('a');
-            githubLink.href = project.links.github;
-            githubLink.target = '_blank';
-            githubLink.rel = 'noopener noreferrer';
-            githubLink.className = 'tech-badge';
-            githubLink.innerHTML = '<i class="fab fa-github"></i> Code source';
-            linksContainer.appendChild(githubLink);
-        }
-        
-        if (project.links.live) {
-            const liveLink = document.createElement('a');
-            liveLink.href = project.links.live;
-            liveLink.target = '_blank';
-            liveLink.rel = 'noopener noreferrer';
-            liveLink.className = 'tech-badge';
-            liveLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Voir en ligne';
-            linksContainer.appendChild(liveLink);
-        }
-        
-    } else {
-        // Redirection si le projet n'existe pas
-        window.location.href = 'index.html#projects';
+    const ids = Object.keys(projectsData);
+    if (!project) {
+        document.querySelector(".project-details-section .container").innerHTML = `
+            <div class="pkg-error">
+                <p class="pkg-error-cmd">$ apt show projet-${projectId || "?"}</p>
+                <p class="pkg-error-msg">E: Unable to locate package <b>projet-${projectId || "?"}</b></p>
+                <a href="index.html#projects" class="btn btn-secondary" style="margin-top:1.5rem">
+                    <i class="fas fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>`;
+        return;
     }
-
+    const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const crumb = document.createElement("p");
+    crumb.className = "pkg-breadcrumb";
+    crumb.innerHTML = `<span class="dim">ulrich@portfolio</span>:<span class="path">~/projets</span>$ cd ${slug}`;
+    document.querySelector(".back-button").after(crumb);
+    document.title = `${project.title} | Portfolio Ulrich WENDSONGDE`;
+    document.getElementById('project-title').textContent = project.title;
+    document.getElementById('project-subtitle').textContent = project.subtitle;
+    document.getElementById('project-full-description').textContent = project.description;
+    const mainImage = document.getElementById('main-project-image');
+    mainImage.src = project.images[0];
+    mainImage.alt = project.title;
+    const thumbnailsContainer = document.getElementById('project-thumbnails');
+    thumbnailsContainer.innerHTML = '';
+    let currentIndex = 0;
+    const counter = document.createElement("span");
+    counter.className = "gallery-counter";
+    const showImage = (index) => {
+        currentIndex = (index + project.images.length) % project.images.length;
+        mainImage.src = project.images[currentIndex];
+        mainImage.alt = `Aperçu ${currentIndex + 1} du projet ${project.title}`;
+        counter.textContent = `[${currentIndex + 1}/${project.images.length}]`;
+        thumbnailsContainer.querySelectorAll(".thumbnail").forEach((t, i) =>
+            t.classList.toggle("active", i === currentIndex));
+    };
+    const gallery = document.querySelector(".project-gallery");
+    gallery.classList.add("has-nav");
+    const prevBtn = document.createElement("button");
+    prevBtn.className = "gallery-arrow prev";
+    prevBtn.type = "button";
+    prevBtn.setAttribute("aria-label", "Image précédente");
+    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "gallery-arrow next";
+    nextBtn.type = "button";
+    nextBtn.setAttribute("aria-label", "Image suivante");
+    nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+    prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+    nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+    gallery.append(prevBtn, nextBtn);
+    project.images.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = `Aperçu ${index + 1} du projet ${project.title}`;
+        img.className = 'thumbnail' + (index === 0 ? ' active' : '');
+        img.loading = 'lazy';
+        img.addEventListener('click', () => showImage(index));
+        thumbnailsContainer.appendChild(img);
+    });
+    gallery.querySelector(".project-main-image").after(counter);
+    showImage(0);
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+        else if (e.key === "ArrowRight") showImage(currentIndex + 1);
+    });
+    const techContainer = document.getElementById('project-techs');
+    techContainer.innerHTML = '';
+    project.technologies.forEach(tech => {
+        const span = document.createElement('span');
+        span.className = 'tech-badge';
+        span.textContent = tech;
+        techContainer.appendChild(span);
+    });
+    const linksContainer = document.querySelector('.project-links');
+    linksContainer.innerHTML = '';
+    project.links.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'pkg-link';
+        a.innerHTML = link.type === "github"
+            ? `<i class="fab fa-github"></i> ${link.label}`
+            : `<i class="fas fa-external-link-alt"></i> ${link.label}`;
+        linksContainer.appendChild(a);
+    });
+    const pos = ids.indexOf(projectId);
+    const nav = document.createElement("nav");
+    nav.className = "project-pager";
+    const mk = (id, dir) => {
+        if (!id) return `<span class="pager-empty"></span>`;
+        const p = projectsData[id];
+        const arrow = dir === "prev" ? "←" : "→";
+        const cmd = dir === "prev" ? "cd ../" : `cd ${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 24)}`;
+        return `<a href="projet-details.html?id=${id}" class="pager-link ${dir}">
+            <span class="pager-arrow">${arrow}</span>
+            <span class="pager-label"><small>${cmd}</small>${p.title}</span>
+        </a>`;
+    };
+    nav.innerHTML =
+        mk(ids[pos - 1], "prev") +
+        mk(ids[pos + 1] !== undefined ? ids[pos + 1] : null, "next");
+    document.querySelector(".project-info-card").after(nav);
 });

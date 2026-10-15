@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kindaulrich.vercel.app/sitemap.xml
