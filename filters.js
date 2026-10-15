@@ -17,15 +17,16 @@
     const badge = card.querySelector(".project-category");
     card.dataset.cat = badge ? catKey(badge.textContent) : "other";
   });
+  const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
   const bar = document.createElement("div");
   bar.className = "proj-filters";
   bar.setAttribute("role", "tablist");
-  bar.setAttribute("aria-label", "Filtrer les projets");
+  bar.setAttribute("aria-label", isEN ? "Filter projects" : "Filtrer les projets");
   const FILTERS = [
-    { key: "all",       label: "ls ./",              hint: "Tous" },
-    { key: "featured",  label: "./featured",          hint: "Mis en avant" },
-    { key: "fullstack", label: "grep full-stack",     hint: "Full-Stack" },
-    { key: "frontend",  label: "grep front-end",      hint: "Front-End" },
+    { key: "all",       label: "ls ./",              hint: isEN ? "All" : "Tous" },
+    { key: "featured",  label: "./featured",         hint: isEN ? "Featured" : "Mis en avant" },
+    { key: "fullstack", label: "grep full-stack",    hint: "Full-Stack" },
+    { key: "frontend",  label: "grep front-end",     hint: "Front-End" },
   ];
   bar.innerHTML = FILTERS.map((f, i) => `
     <button type="button" class="filter-btn${i === 0 ? " active" : ""}"
@@ -35,7 +36,9 @@
   grid.before(bar);
   const count = document.createElement("span");
   count.className = "filter-count";
-  count.textContent = `${cards.length} éléments`;
+  count.textContent = isEN
+    ? `${cards.length} items`
+    : `${cards.length} éléments`;
   bar.appendChild(count);
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const applyFilter = (key) => {
@@ -45,7 +48,9 @@
       card.classList.toggle("filter-hide", !match);
       if (match) shown++;
     });
-    count.textContent = `${shown} élément${shown > 1 ? "s" : ""}`;
+    count.textContent = isEN
+      ? `${shown} item${shown > 1 ? "s" : ""}`
+      : `${shown} élément${shown > 1 ? "s" : ""}`;
     bar.querySelectorAll(".filter-btn").forEach((b) => {
       const on = b.dataset.filter === key;
       b.classList.toggle("active", on);

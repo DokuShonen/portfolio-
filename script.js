@@ -35,7 +35,13 @@
   }
   const typingEl = document.getElementById('typingRole');
   if (typingEl) {
-    const roles = [
+    const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
+    const roles = isEN ? [
+      'Computer Engineer',
+      'Full-Stack Developer',
+      'Tech Enthusiast',
+      'Creator of Innovative Solutions'
+    ] : [
       'Ingénieur en Technologie du Génie Informatique',
       'Développeur Full-Stack',
       'Passionné de Technologie',

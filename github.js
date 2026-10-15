@@ -2,6 +2,18 @@
   "use strict";
   const grid = document.getElementById("githubGrid");
   if (!grid) return;
+  const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
+  const T = isEN ? {
+    noDesc: "// no description",
+    updated: "updated",
+    error: "// GitHub feed temporarily unavailable — API quota or network",
+    open: "Open github.com/DokuShonen directly"
+  } : {
+    noDesc: "// pas de description",
+    updated: "maj",
+    error: "// flux GitHub momentanément indisponible — quota API ou réseau",
+    open: "Ouvrir github.com/DokuShonen directement"
+  };
   const USER = "DokuShonen";
   const PINNED_ORDER = ["manabar_web", "archiburkina", "fasoluxe", "alpha", "immo", "fariflore", "TaskBoard", "cvFR"];
   const LANG_COLORS = {
@@ -17,12 +29,12 @@
         <i class="fas fa-code-branch"></i>
         <a href="${esc(r.html_url)}" target="_blank" rel="noopener noreferrer" class="gh-name">${esc(r.name)}</a>
       </div>
-      <p class="gh-desc">${esc(r.description || "// pas de description")}</p>
+      <p class="gh-desc">${esc(r.description || T.noDesc)}</p>
       <div class="gh-meta">
         ${r.language ? `<span class="gh-lang"><span class="dot" style="--lc:${LANG_COLORS[r.language] || "#8b949e"}"></span>${esc(r.language)}</span>` : ""}
         <span class="gh-stat"><i class="far fa-star"></i> ${r.stargazers_count}</span>
         <span class="gh-stat"><i class="fas fa-code-fork"></i> ${r.forks_count}</span>
-        <time class="gh-date" datetime="${esc(r.updated_at)}">maj ${new Date(r.updated_at).toLocaleDateString("fr-FR", { month: "short", year: "numeric" })}</time>
+        <time class="gh-date" datetime="${esc(r.updated_at)}">${T.updated} ${new Date(r.updated_at).toLocaleDateString(isEN ? "en-GB" : "fr-FR", { month: "short", year: "numeric" })}</time>
       </div>
     </article>`;
   const render = (repos) => {
@@ -41,9 +53,9 @@
   const fallback = () => {
     grid.innerHTML = `
       <div class="gh-error">
-        <p>// flux GitHub momentanément indisponible — quota API ou réseau</p>
+        <p>${T.error}</p>
         <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer">
-          Ouvrir github.com/DokuShonen directement <i class="fas fa-arrow-right"></i></a>
+          ${T.open} <i class="fas fa-arrow-right"></i></a>
       </div>`;
   };
   const CACHE_KEY = "gh-repos-cache";

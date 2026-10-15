@@ -15,7 +15,19 @@
   } else {
     sessionStorage.setItem("boot-seen", "1");
   }
-  const SECTIONS = [
+  const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
+  const SECTIONS = isEN ? [
+    { label: "Home",          hint: "#hero",       kw: "home hero start index accueil" },
+    { label: "About",         hint: "#about",      kw: "about qui suis je formation education" },
+    { label: "Skills",        hint: "#skills",     kw: "skills technos stack langages technologies" },
+    { label: "Projects",      hint: "#projects",   kw: "projects work portfolio projets réalisations" },
+    { label: "Maquis Manager", hint: "#projects",  kw: "django python featured stock" },
+    { label: "Résumé (FR)",   hint: "https://cv-fr.vercel.app/", kw: "cv resume français pdf parcours", ext: true },
+    { label: "Résumé (EN)",   hint: "https://cveng.vercel.app/", kw: "cv resume english pdf", ext: true },
+    { label: "Contact",       hint: "#contact",    kw: "contact email message hire" },
+    { label: "GitHub",        hint: "https://github.com/DokuShonen", kw: "github code repos", ext: true },
+    { label: "LinkedIn",      hint: "https://www.linkedin.com/in/ulrich-kinda-0766b6289", kw: "linkedin network professional", ext: true },
+  ] : [
     { label: "Accueil",        hint: "#hero",       kw: "home hero accueil start" },
     { label: "À propos",       hint: "#about",      kw: "about qui suis je formation" },
     { label: "Compétences",    hint: "#skills",     kw: "skills technos stack langages" },
@@ -27,18 +39,41 @@
     { label: "GitHub",         hint: "https://github.com/DokuShonen", kw: "github code repos", ext: true },
     { label: "LinkedIn",       hint: "https://www.linkedin.com/in/ulrich-kinda-0766b6289", kw: "linkedin réseau pro", ext: true },
   ];
+  const TXT = isEN ? {
+    placeholder: "Type a command... (help: ?)",
+    empty: "// no results",
+    footer: "↑↓ navigate · enter open · esc close",
+    hint: 'Quick navigation <kbd>Ctrl</kbd>+<kbd>K</kbd>',
+    top: "Back to top",
+    errors: {
+      name: "Error: name too short (min. 2 characters)",
+      email: "Error: invalid email address",
+      message: "Error: message too short (min. 10 characters)"
+    }
+  } : {
+    placeholder: "Tapez une commande... (aide: ?)",
+    empty: "// aucun résultat",
+    footer: "↑↓ naviguer · entrée ouvrir · esc fermer",
+    hint: 'Navigation rapide <kbd>Ctrl</kbd>+<kbd>K</kbd>',
+    top: "Retour en haut",
+    errors: {
+      name: "Erreur : nom trop court (min. 2 caractères)",
+      email: "Erreur : adresse email invalide",
+      message: "Erreur : message trop court (min. 10 caractères)"
+    }
+  };
   const palette = document.createElement("div");
   palette.className = "cmd-palette";
   palette.hidden = true;
   palette.innerHTML = `
-    <div class="cmd-box" role="dialog" aria-label="Navigation rapide">
+    <div class="cmd-box" role="dialog" aria-label="${isEN ? "Quick navigation" : "Navigation rapide"}">
       <div class="cmd-input-row">
         <span class="cmd-chevron">❯</span>
-        <input type="text" class="cmd-input" placeholder="Tapez une commande... (aide: ?)" autocomplete="off" spellcheck="false">
+        <input type="text" class="cmd-input" placeholder="${TXT.placeholder}" autocomplete="off" spellcheck="false">
         <kbd class="cmd-kbd">esc</kbd>
       </div>
       <ul class="cmd-results" role="listbox"></ul>
-      <div class="cmd-footer">↑↓ naviguer · entrée ouvrir · esc fermer</div>
+      <div class="cmd-footer">${TXT.footer}</div>
     </div>
   `;
   document.body.appendChild(palette);
@@ -51,7 +86,7 @@
     if (!results.length) {
       const li = document.createElement("li");
       li.className = "cmd-empty";
-      li.textContent = "// aucun résultat";
+      li.textContent = TXT.empty;
       listEl.appendChild(li);
       return;
     }
@@ -120,7 +155,7 @@
   const topBtn = document.createElement("button");
   topBtn.className = "ux-top-btn magnetic";
   topBtn.type = "button";
-  topBtn.setAttribute("aria-label", "Retour en haut");
+  topBtn.setAttribute("aria-label", TXT.top);
   topBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
   topBtn.hidden = true;
   document.body.appendChild(topBtn);
@@ -142,9 +177,9 @@
   const form = document.getElementById("contactForm");
   if (form) {
     const fields = [
-      { id: "name",    test: (v) => v.trim().length >= 2,  msg: "Erreur : nom trop court (min. 2 caractères)" },
-      { id: "email",   test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), msg: "Erreur : adresse email invalide" },
-      { id: "message", test: (v) => v.trim().length >= 10, msg: "Erreur : message trop court (min. 10 caractères)" },
+      { id: "name",    test: (v) => v.trim().length >= 2,  msg: TXT.errors.name },
+      { id: "email",   test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), msg: TXT.errors.email },
+      { id: "message", test: (v) => v.trim().length >= 10, msg: TXT.errors.message },
     ];
     fields.forEach(({ id, test, msg }) => {
       const field = document.getElementById(id);
@@ -172,7 +207,7 @@
     hint.id = "cmdHint";
     hint.type = "button";
     hint.className = "cmd-hint-btn";
-    hint.innerHTML = 'Navigation rapide <kbd>Ctrl</kbd>+<kbd>K</kbd>';
+    hint.innerHTML = TXT.hint;
     hint.addEventListener("click", openPalette);
     heroButtons.after(hint);
   }

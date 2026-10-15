@@ -1,16 +1,17 @@
 (() => {
   "use strict";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
   const boot = document.createElement("div");
   boot.className = "boot-screen";
   boot.setAttribute("role", "status");
-  boot.setAttribute("aria-label", "Démarrage du système");
+  boot.setAttribute("aria-label", isEN ? "System booting" : "Démarrage du système");
   boot.innerHTML = `
     <pre class="boot-log" aria-hidden="true"></pre>
     <div class="boot-login" aria-hidden="true">
       <span class="boot-prompt">ulrich@portfolio</span>:<span class="boot-path">~</span>$ <span class="boot-cmd"></span><span class="boot-caret">▊</span>
     </div>
-    <button class="boot-skip" type="button">appuyez sur une touche pour passer</button>
+    <button class="boot-skip" type="button">${isEN ? "press any key to skip" : "appuyez sur une touche pour passer"}</button>
     <div class="boot-flicker" aria-hidden="true"></div>
   `;
   document.body.prepend(boot);
@@ -38,7 +39,7 @@
     { t: "ulrich-os 3.1 tty1", blank: true },
     { t: "login: ulrich (automatic login)", blank: true },
   ];
-  const FINAL_CMD = "./ouvrir_portfolio --futur";
+  const FINAL_CMD = isEN ? "./open_portfolio --future" : "./ouvrir_portfolio --futur";
   let finished = false;
   let rafId = null;
   const finishBoot = () => {
@@ -57,14 +58,6 @@
     return;
   }
   document.body.classList.add("booting");
-  const padStatus = (line, status) => {
-    return line.replace("[  OK  ]", "").padEnd(0) ;
-  };
-  const renderLine = (obj) => {
-    if (!obj.t && obj.blank) return "\n";
-    if (!obj.s) return obj.t + "\n";
-    return null; // géré par le rendu HTML
-  };
   let idx = 0;
   const nextLine = () => {
     if (finished) return;

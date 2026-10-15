@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | KINDA Ulrich WENDSONGDE - Computer Engineer</title>
+    <meta name="description" content="Portfolio of KINDA Ulrich WENDSONGDE, computer engineer: full-stack web projects (Python/Django, PHP, MySQL), technical skills and contact.">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230d1117'/%3E%3Ctext x='50' y='72' font-family='monospace' font-size='52' font-weight='bold' fill='%2300ff88' text-anchor='middle'%3E_/%3C/text%3E%3C/svg%3E">
     <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+0lEQVRYhe2WMQ7CMAxFnwMkFm7AwhW4AQdgYeMGHICFjRtwABY2bsABWNi4AQdgYeMGHICFjRtwABa2dAMWpEhR2qRO1C9Zie3E/5/jpE1RFEVRFEVRFEVRlP/EA9gCJ+AB3IFW/LsBO2AOtL8Q0AIH4Aq8gDfQZ/QW7sBZ5M6B5hMBR+ApNn8LgUzOQkQt4Cw2eQN9QcBd5D6AuhBwE7lvYFQIuIrcDzAuBFxE7gcICgFnkfsB4kLASeR+gLQQcBS5H2BSCDiI3A8wLQQcRO4HmBUC9iL3A8wLAXuR+wEWhYBf5wLzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQsCvcwHzQkVRFEVRFEVRFEX5S97JpVfRutTkLAAAAABJRU5ErkJggg==">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Langues & canonical -->
+    <link rel="canonical" href="https://kindaulrich.vercel.app/en.html">
+    <link rel="alternate" hreflang="fr" href="https://kindaulrich.vercel.app/">
+    <link rel="alternate" hreflang="en" href="https://kindaulrich.vercel.app/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://kindaulrich.vercel.app/">
     <!-- Partage social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="KINDA Ulrich WENDSONGDE - Ingénieur Génie Informatique">
-    <meta property="og:description" content="Portfolio de Ulrich WENDSONGDE : développement web full-stack, Python/Django, systèmes et bases de données.">
+    <meta property="og:title" content="KINDA Ulrich WENDSONGDE - Computer Engineer">
+    <meta property="og:description" content="Portfolio of Ulrich WENDSONGDE: full-stack web development, Python/Django, systems and databases.">
     <meta property="og:image" content="https://kindaulrich.vercel.app/images/projets/manabar/01_thumb.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KINDA Ulrich WENDSONGDE - Ingénieur Génie Informatique">
-    <meta name="twitter:description" content="Développement web full-stack, Python/Django, systèmes et bases de données.">
+    <meta name="twitter:title" content="KINDA Ulrich WENDSONGDE - Computer Engineer">
+    <meta name="twitter:description" content="Full-stack web development, Python/Django, systems and databases.">
     <!-- Données structurées (Google) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "KINDA Ulrich WENDSONGDE",
-      "jobTitle": "Ingénieur en Technologie du Génie Informatique",
+      "jobTitle": "Computer Engineer",
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Université Aube Nouvelle" },
       "knowsAbout": ["Développement Web", "Python", "Django", "PHP", "SQL", "Linux", "Systèmes"],
       "url": "https://kindaulrich.vercel.app/",
@@ -38,9 +45,12 @@
     }
     </script>
     <meta name="theme-color" content="#00ff88">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Matrix Rain Canvas Background -->
     <canvas id="matrix-canvas"></canvas>
 
@@ -56,7 +66,7 @@
     <!-- Navigation -->
     <nav class="main-nav" id="mainNav">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo" aria-label="Retour à l'accueil">
+            <a href="#hero" class="nav-logo" aria-label="Back to home">
                 <span class="logo-bracket">&lt;</span>
                 <span class="logo-text">UW</span>
                 <span class="logo-bracket">/&gt;</span>
@@ -64,10 +74,10 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#hero" class="nav-link active" data-text="Home"><span class="ws-number">1</span>Home</a></li>
-                <li><a href="index.html#about" class="nav-link" data-text="About"><span class="ws-number">2</span>About</a></li>
-                <li><a href="index.html#skills" class="nav-link" data-text="Skills"><span class="ws-number">3</span>Skills</a></li>
-                <li><a href="index.html#projects" class="nav-link" data-text="Projects"><span class="ws-number">4</span>Projects</a></li>
-                <li><a href="index.html#contact" class="nav-link" data-text="Contact"><span class="ws-number">5</span>Contact</a></li>
+                <li><a href="#about" class="nav-link" data-text="About"><span class="ws-number">2</span>About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills"><span class="ws-number">3</span>Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects"><span class="ws-number">4</span>Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact"><span class="ws-number">5</span>Contact</a></li>
             </ul>
 
             <div class="nav-right">
@@ -120,8 +130,8 @@
                     </div>
                     <div class="hero-stats reveal-up" style="--delay: 0.6s">
                         <div class="stat-item">
-                            <span class="stat-number" data-count="8">0</span>
-                            <span class="stat-label">Projets</span>
+                            <span class="stat-number" data-count="7">0</span>
+                            <span class="stat-label">Projects</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
@@ -147,14 +157,14 @@
                         </div>
                         <pre class="code-content"><code><span class="code-line"><span class="code-keyword">interface</span> <span class="code-type">Developer</span> {</span>
 <span class="code-line">  <span class="code-prop">name</span>: <span class="code-string">"KINDA Ulrich WENDSONGDE"</span>;</span>
-<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Ingénieur en Technologie du Génie Informatique"</span>;</span>
+<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Computer Engineer"</span>;</span>
 <span class="code-line">  <span class="code-prop">university</span>: <span class="code-string">"Aube Nouvelle"</span>;</span>
 <span class="code-line">  <span class="code-prop">passions</span>: <span class="code-type">string[]</span>;</span>
 <span class="code-line">}</span>
 <span class="code-line"></span>
 <span class="code-line"><span class="code-keyword">const</span> <span class="code-var">ulrich</span>: <span class="code-type">Developer</span> = {</span>
 <span class="code-line">  <span class="code-prop">name</span>: <span class="code-string">"KINDA Ulrich WENDSONGDE"</span>,</span>
-<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Ingénieur en TGI"</span>,</span>
+<span class="code-line">  <span class="code-prop">role</span>: <span class="code-string">"Computer Eng."</span>,</span>
 <span class="code-line">  <span class="code-prop">university</span>: <span class="code-string">"Aube Nouvelle"</span>,</span>
 <span class="code-line">  <span class="code-prop">passions</span>: [</span>
 <span class="code-line">    <span class="code-string">"web-dev"</span>,</span>
@@ -174,11 +184,11 @@
             <div class="mouse">
                 <div class="mouse-wheel"></div>
             </div>
-            <span>Défiler</span>
+            <span>Scroll</span>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
@@ -223,14 +233,24 @@
                         <p>Explore my academic background and technical skills in detail.</p>
                     </div>
                     <div class="cv-banner-actions">
-                        <a href="https://cv-fr.vercel.app/" target="_blank" class="btn btn-primary magnetic">
-                            <span class="btn-icon"><i class="fas fa-language"></i></span>
-                            <span>French</span>
-                        </a>
-                        <a href="https://cveng.vercel.app/" target="_blank" class="btn btn-secondary magnetic">
-                            <span class="btn-icon"><i class="fas fa-globe"></i></span>
-                            <span>English</span>
-                        </a>
+                        <div class="cv-banner-buttons">
+                            <a href="https://cv-fr.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic">
+                                <span class="btn-icon"><i class="fas fa-language"></i></span>
+                                <span>French</span>
+                            </a>
+                            <a href="https://cveng.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
+                                <span class="btn-icon"><i class="fas fa-globe"></i></span>
+                                <span>English</span>
+                            </a>
+                        </div>
+                        <div class="cv-pdf-links">
+                            <a href="CV_Ulrich_WENDSONGDE_FR.pdf" download>
+                                <i class="fas fa-file-pdf"></i> Download PDF (FR)
+                            </a>
+                            <a href="CV_Ulrich_WENDSONGDE_EN.pdf" download>
+                                <i class="fas fa-file-pdf"></i> Download PDF (EN)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -419,7 +439,7 @@
                                     <a href="https://github.com/DokuShonen/archiburkina.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://archiburkina.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="https://archiburkina.vercel.app/" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -437,8 +457,8 @@
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=1" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=1&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -452,7 +472,7 @@
                                     <a href="https://github.com/DokuShonen/fasoluxe.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="http://fasoluxe.atwebpages.com/public" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="http://fasoluxe.atwebpages.com/public" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -470,8 +490,8 @@
                                 <span>MySQL</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=2" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=2&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -485,7 +505,7 @@
                                     <a href="https://github.com/DokuShonen/alpha.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="http://alphaitiot.atwebpages.com" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="http://alphaitiot.atwebpages.com" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -503,8 +523,8 @@
                                 <span>SQL</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=3" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=3&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -518,7 +538,7 @@
                                     <a href="https://github.com/DokuShonen/immo.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://site-immobilier.com" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="https://site-immobilier.com" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -536,8 +556,8 @@
                                 <span>SQL</span>
                                 <span>Flutter</span>
                             </div>
-                            <a href="projet-details.html?id=4" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=4&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -551,7 +571,7 @@
                                     <a href="https://github.com/DokuShonen/fariflore.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://fariflore.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="https://fariflore.vercel.app/" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -568,8 +588,8 @@
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=5" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=5&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -583,7 +603,7 @@
                                     <a href="https://github.com/DokuShonen/cvfr.git" target="_blank" class="project-action magnetic" aria-label="GitHub FR">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://cv-fr.vercel.app/" target="_blank" class="project-action magnetic" aria-label="CV Français">
+                                    <a href="https://cv-fr.vercel.app/" target="_blank" class="project-action magnetic" aria-label="French CV">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -600,8 +620,8 @@
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="projet-details.html?id=6" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=6&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -615,7 +635,7 @@
                                     <a href="https://github.com/DokuShonen/Manabar_linux" target="_blank" class="project-action magnetic" aria-label="GitHub Linux">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://suzuya.pythonanywhere.com/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                    <a href="https://suzuya.pythonanywhere.com/" target="_blank" class="project-action magnetic" aria-label="View live">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -633,8 +653,8 @@
                                 <span>PostgreSQL</span>
                                 <span>Bootstrap 5</span>
                             </div>
-                            <a href="projet-details.html?id=7" class="project-link">
-                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            <a href="projet-details.html?id=7&amp;lang=en" class="project-link">
+                                View details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -717,31 +737,29 @@
                 </div>
             </div>
         </section>
+        <!-- Section GitHub live -->
+        <section id="github" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fab fa-github"></i> // git remote</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">GitHub Activity</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                    <p class="section-subtitle reveal-up" style="--delay: 0.2s">My public repositories, live from the GitHub API</p>
+                </div>
+                <div class="github-grid" id="githubGrid" aria-live="polite">
+                    <div class="gh-loading">// git fetch in progress...</div>
+                </div>
+                <div class="gh-footer reveal-up">
+                    <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
+                        <span class="btn-icon"><i class="fab fa-github"></i></span>
+                        <span>git clone DokuShonen --all-my-projects</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-
-    <!-- Section GitHub live -->
-    <section id="github" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up"><i class="fab fa-github"></i> // git remote</span>
-                <h2 class="section-title reveal-up" style="--delay: 0.1s">Activité GitHub</h2>
-                <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
-                <p class="section-subtitle reveal-up" style="--delay: 0.2s">Mes dépôts publics, en direct depuis l'API GitHub</p>
-            </div>
-            <div class="github-grid" id="githubGrid" aria-live="polite">
-                <div class="gh-loading">// git fetch en cours...</div>
-            </div>
-            <div class="gh-footer reveal-up">
-                <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
-                    <span class="btn-icon"><i class="fab fa-github"></i></span>
-                    <span>git clone DokuShonen --tous-mes-projets</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <footer class="main-footer">
         <div class="container">
             <!-- Barre de statut façon htop/systemctl -->
@@ -773,7 +791,7 @@
                         <li><a href="#skills"><span class="prompt">$</span>cd competences</a></li>
                         <li><a href="#projects"><span class="prompt">$</span>cd projets</a></li>
                         <li><a href="#contact"><span class="prompt">$</span>cd contact</a></li>
-                        <li><a href="en.html"><span class="prompt">$</span>export LANG=en_US</a></li>
+                        <li><a href="index.html"><span class="prompt">$</span>export LANG=fr_FR</a></li>
                     </ul>
                 </nav>
 

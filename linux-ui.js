@@ -55,5 +55,4 @@
     }
   }
   /* Workspaces + horloge : désormais en dur dans le HTML */
-  observer.observe(document.body, { childList: true });
 })();
