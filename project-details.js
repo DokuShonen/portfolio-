@@ -208,33 +208,35 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             technologies: ["Python", "PyTorch", "NLLB-200", "LoRA / PEFT", "FastAPI", "NLP"],
             images: [
-                "images/projets/fasonoreesa/nllb_lora_infer.webp"
+                "images/projets/fasonoreesa/Faso no-rɛɛsa.png",
+                "images/projets/fasonoreesa/Image collée.png"
             ],
             links: [
                 { type: "live", url: "https://suzuyaxiii-faso-no-reesa.hf.space/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '9': {
-            title: "Lycée Saint Augustin App",
+            title: "SAGESA — logiciel de gestion scolaire",
             subtitle: "Logiciel de gestion scolaire — C# / .NET",
             description: "Application de bureau destinée à la gestion complète d'un établissement scolaire : scolarité, administration et comptabilité réunies dans un seul logiciel multi-langues. Elle couvre les inscriptions, la tenue des notes et la génération des bulletins, la gestion des enseignants, des parents et du personnel administratif, le suivi de caisse ainsi qu'un journal d'audit. L'interface est construite selon le pattern MVVM avec Avalonia UI, ce qui permet de viser Windows et Linux à partir d'une même base de code.",
             en: {
-                title: "Lycée Saint Augustin App",
+                title: "SAGESA — school management software",
                 subtitle: "School management software — C# / .NET",
                 description: "Desktop application covering the complete management of a school: enrolment, administration and accounting brought together in a single multi-language application. It handles registrations, grades and report cards, teachers, parents and administrative staff, cash desk tracking and an audit log. The UI follows the MVVM pattern on Avalonia UI, targeting both Windows and Linux from a single codebase."
             },
             technologies: ["C#", ".NET 8", "Avalonia UI", "PostgreSQL", "MVVM"],
             images: [
-                "images/projets/lycee/dashboard.webp",
-                "images/projets/lycee/notes.webp",
-                "images/projets/lycee/bulletins.webp",
-                "images/projets/lycee/eleves.webp",
-                "images/projets/lycee/inscriptions.webp",
-                "images/projets/lycee/parametres.webp",
-                "images/projets/lycee/login.webp"
+                "images/projets/sagesa/dashboard.webp",
+                "images/projets/sagesa/notes.webp",
+                "images/projets/sagesa/bulletins.webp",
+                "images/projets/sagesa/eleves.webp",
+                "images/projets/sagesa/inscriptions.webp",
+                "images/projets/sagesa/parametres.webp",
+                "images/projets/sagesa/login.webp"
             ],
             links: [
-                { type: "github", url: "https://github.com/DokuShonen/SAGESA", label: "Code source", label_en: "Source code" }
+                { type: "github", url: "https://github.com/DokuShonen/SAGESA", label: "Code source", label_en: "Source code" },
+                { type: "live", url: "https://sagesa.vercel.app/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '10': {
