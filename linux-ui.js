@@ -47,6 +47,21 @@
       </div>
     `;
     aboutGrid.after(card);
+    /* script.js a collecté les éléments à animer avant cette insertion :
+       on observe la carte ici pour qu'elle se révèle comme les autres. */
+    if (reduceMotion) {
+      card.classList.add("revealed");
+    } else {
+      const cardObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      cardObserver.observe(card);
+    }
     const upEl = card.querySelector("[data-uptime]");
     if (!reduceMotion) {
       setInterval(() => { if (upEl.isConnected) upEl.textContent = uptime(); }, 1000);

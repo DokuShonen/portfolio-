@@ -196,6 +196,149 @@ document.addEventListener('DOMContentLoaded', function () {
                 { type: "github", url: "https://github.com/DokuShonen/manabar_win.git", label: "Source Windows", label_en: "Windows source" },
                 { type: "live", url: "https://suzuya.pythonanywhere.com/", label: "Voir en ligne", label_en: "View live" }
             ]
+        },
+        '8': {
+            title: "Faso no-rêesa — traduction neuronale hors-ligne",
+            subtitle: "IA & TALN — Python, PyTorch, FastAPI",
+            description: "« Faso no-rêesa » est un système de traduction automatique neuronale pensé pour les cinq langues nationales du Burkina Faso : mooré, dioula, fulfulde, gourmanchéma et haoussa. Le projet adapte le modèle NLLB-200 par fine-tuning LoRA sur un corpus de 2 500 000 phrases, ce qui réduit fortement l'empreinte du modèle sans dégrader sa qualité. L'inférence fonctionne entièrement hors-ligne sur processeur, pour 2,1 Go de RAM : ni GPU ni service externe ne sont nécessaires. Une interface web responsive consomme une API FastAPI, et la qualité de traduction est mesurée par des tests de charge et l'indicateur SacreBLEU.",
+            en: {
+                title: "Faso no-rêesa — offline neural translation",
+                subtitle: "AI & NLP — Python, PyTorch, FastAPI",
+                description: "“Faso no-rêesa” is a neural machine translation system designed for the five national languages of Burkina Faso: Mooré, Dioula, Fulfulde, Gourmanchéma and Haoussa. The project adapts the NLLB-200 model through LoRA fine-tuning on a 2,500,000-sentence corpus, greatly reducing the model footprint without degrading quality. Inference runs fully offline on the CPU for 2.1 GB of RAM: no GPU or external service is required. A responsive web interface consumes a FastAPI API, and translation quality is measured with load tests and the SacreBLEU metric."
+            },
+            technologies: ["Python", "PyTorch", "NLLB-200", "LoRA / PEFT", "FastAPI", "NLP"],
+            images: [
+                "images/projets/fasonoreesa/nllb_lora_infer.webp"
+            ],
+            links: [
+
+            ]
+        },
+        '9': {
+            title: "Lycée Saint Augustin App",
+            subtitle: "Logiciel de gestion scolaire — C# / .NET",
+            description: "Application de bureau destinée à la gestion complète d'un établissement scolaire : scolarité, administration et comptabilité réunies dans un seul logiciel multi-langues. Elle couvre les inscriptions, la tenue des notes et la génération des bulletins, la gestion des enseignants, des parents et du personnel administratif, le suivi de caisse ainsi qu'un journal d'audit. L'interface est construite selon le pattern MVVM avec Avalonia UI, ce qui permet de viser Windows et Linux à partir d'une même base de code.",
+            en: {
+                title: "Lycée Saint Augustin App",
+                subtitle: "School management software — C# / .NET",
+                description: "Desktop application covering the complete management of a school: enrolment, administration and accounting brought together in a single multi-language application. It handles registrations, grades and report cards, teachers, parents and administrative staff, cash desk tracking and an audit log. The UI follows the MVVM pattern on Avalonia UI, targeting both Windows and Linux from a single codebase."
+            },
+            technologies: ["C#", ".NET 8", "Avalonia UI", "PostgreSQL", "MVVM"],
+            images: [
+                "images/projets/lycee/dashboard.webp",
+                "images/projets/lycee/notes.webp",
+                "images/projets/lycee/bulletins.webp",
+                "images/projets/lycee/eleves.webp",
+                "images/projets/lycee/inscriptions.webp",
+                "images/projets/lycee/parametres.webp",
+                "images/projets/lycee/login.webp"
+            ],
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/SAGESA", label: "Code source", label_en: "Source code" }
+            ]
+        },
+        '10': {
+            title: "SmartAgriMarket",
+            subtitle: "Marketplace agricole — Angular / Spring Boot",
+            description: "SmartAgriMarket est une plateforme de marketplace qui relie directement les producteurs agricoles et les acheteurs, sans intermédiaire. Elle réunit une messagerie intégrée, une bourse du matériel agricole, un forum d'entraide et le suivi logistique des commandes. L'architecture est Full Stack : frontend Angular, backend Java et base PostgreSQL conteneurisée avec Docker.",
+            en: {
+                title: "SmartAgriMarket",
+                subtitle: "Agricultural marketplace — Angular / Spring Boot",
+                description: "SmartAgriMarket is a marketplace platform connecting agricultural producers and buyers directly, with no middleman. It combines built-in messaging, an agricultural equipment exchange, a community forum and order logistics tracking. The architecture is Full Stack: Angular frontend, Java backend and PostgreSQL database containerised with Docker."
+            },
+            technologies: ["Angular 18", "Spring Boot", "Java 21", "PostgreSQL", "Docker"],
+            images: [
+                "images/projets/smartagrimarket/01-accueil.webp"
+            ],
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/SmartAgriMarket", label: "Code source", label_en: "Source code" }
+            ]
+        },
+        '11': {
+            title: "Onvaoù ?",
+            subtitle: "Application mobile communautaire — React Native",
+            description: "Onvaoù ? est une application mobile communautaire qui permet de découvrir, de partager et de localiser des lieux d'intérêt. L'interface est pensée pour un usage mobile d'abord : navigation par onglets avec Expo Router, gestion d'état légère par Zustand et animations fluides. Les données sont servies par Supabase, et le tout est réuni dans une base de code TypeScript unique avec React Native.",
+            en: {
+                title: "Onvaoù ?",
+                subtitle: "Community mobile app — React Native",
+                description: "Onvaoù ? is a community mobile application for discovering, sharing and locating points of interest. The interface is designed mobile-first: tab navigation with Expo Router, lightweight state management through Zustand and smooth animations. Data is served by Supabase, all within a single TypeScript codebase on React Native."
+            },
+            technologies: ["React Native", "Expo", "Expo Router", "TypeScript", "Supabase", "Zustand"],
+            images: [
+                "images/projets/onvao/explore.webp"
+            ],
+            links: [
+
+            ]
+        },
+        '12': {
+            title: "Gestion des réclamations clients",
+            subtitle: "Spring Boot / React — sécurité JWT",
+            description: "Kossa est une application web full-stack dédiée à la gestion des réclamations clients au Burkina Faso. Elle couvre le cycle de vie complet du ticket : création, affectation aux agents, escalade N1 / N2, notifications par e-mail et suivi du respect des SLA. Le backend Spring Boot applique la sécurité par JWT et les tests JUnit ; le frontend React affiche les tableaux de bord et les statistiques d'exploitation. La base PostgreSQL conserve l'historique et le journal d'audit.",
+            en: {
+                title: "Customer Complaint Management",
+                subtitle: "Spring Boot / React — JWT security",
+                description: "Kossa is a full-stack web application for customer complaint management in Burkina Faso. It covers the complete ticket lifecycle: creation, assignment to agents, N1 / N2 escalation, e-mail notifications and SLA compliance tracking. The Spring Boot backend enforces JWT security and JUnit tests; the React frontend displays dashboards and operational statistics. The PostgreSQL database keeps the history and audit log."
+            },
+            technologies: ["Java 17", "Spring Boot", "Spring Security", "JWT", "React", "PostgreSQL"],
+            images: [
+                "images/projets/reclamations/ReclamationController.webp"
+            ],
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/kossa", label: "Code source", label_en: "Source code" },
+                { type: "live", url: "https://kossa-theta.vercel.app", label: "Voir en ligne", label_en: "View live" }
+            ]
+        },
+        '13': {
+            title: "TaskBoard",
+            subtitle: "Application Kanban — Angular / Spring Boot",
+            description: "TaskBoard est une application web de gestion de tâches inspirée de Trello. Le tableau kanban permet de suivre les tâches à faire, en cours et terminées, tandis que le backend Spring Boot expose une API documentée avec Swagger. Le projet s'accompagne de diagrammes UML (cas d'utilisation, classes, séquence) et d'une persistance PostgreSQL assurée par JPA / Hibernate.",
+            en: {
+                title: "TaskBoard",
+                subtitle: "Kanban application — Angular / Spring Boot",
+                description: "TaskBoard is a Trello-inspired web task management application. The Kanban board tracks to-do, in-progress and done tasks, while the Spring Boot backend exposes a Swagger-documented API. The project ships with UML diagrams (use case, class, sequence) and PostgreSQL persistence through JPA / Hibernate."
+            },
+            technologies: ["Angular", "Spring Boot", "Java", "PostgreSQL", "Maven"],
+            images: [
+                "images/projets/taskboard/TaskBoardApplication.webp"
+            ],
+            links: [
+                { type: "github", url: "https://github.com/DokuShonen/TaskBoard", label: "Code source", label_en: "Source code" }
+            ]
+        },
+        '14': {
+            title: "Price List Manager",
+            subtitle: "Gestion & analyse de tarifs — Java / Angular",
+            description: "Price List Manager est une solution Full Stack dédiée aux listes de tarifs d'interconnexion : importation depuis des fichiers Excel, analyse des écarts et comparaison périodique entre opérateurs. Le backend Java 21 et Spring Boot gère l'authentification JWT et la persistance PostgreSQL ; le frontend Angular 18 restitue les tableaux comparatifs et les graphiques via Chart.js, avec un import de fichiers assuré par Apache POI.",
+            en: {
+                title: "Price List Manager",
+                subtitle: "Price management & analysis — Java / Angular",
+                description: "Price List Manager is a Full Stack solution for interconnection price lists: import from Excel files, variance analysis and periodic comparison between operators. The Java 21 and Spring Boot backend handles JWT authentication and PostgreSQL persistence; the Angular 18 frontend renders comparison tables and Chart.js charts, with file imports powered by Apache POI."
+            },
+            technologies: ["Java 21", "Spring Boot", "Angular 18", "PostgreSQL", "Apache POI"],
+            images: [
+                "images/projets/pricelist/PriceListCompare.webp"
+            ],
+            links: [
+
+            ]
+        },
+        '15': {
+            title: "AgroBurkina",
+            subtitle: "Gestion de coopérative — PHP / MySQL",
+            description: "AgroBurkina est un système informatisé de gestion d'une coopérative agricole burkinabè. Il centralise le catalogue des produits, le suivi des stocks et la prévision de rendement, avec des exports CSV destinés au reporting. L'application repose sur une base MySQL / MariaDB servie par Apache, complétée par des traitements Excel et un module Access / VBA pour les besoins comptables.",
+            en: {
+                title: "AgroBurkina",
+                subtitle: "Cooperative management — PHP / MySQL",
+                description: "AgroBurkina is a computerised management system for a Burkinabè agricultural cooperative. It centralises the product catalogue, stock tracking and yield forecasting, with CSV exports for reporting. The application runs on a MySQL / MariaDB database served by Apache, complemented by Excel processing and an Access / VBA module for accounting needs."
+            },
+            technologies: ["PHP", "MySQL / MariaDB", "Access / VBA", "Apache"],
+            images: [
+                "images/projets/agroburkina/catalogue.webp"
+            ],
+            links: [
+
+            ]
         }
     };
 
@@ -357,6 +500,10 @@ document.addEventListener('DOMContentLoaded', function () {
             : `<i class="fas fa-external-link-alt"></i> ${label}`;
         linksContainer.appendChild(a);
     });
+    if (!project.links.length) {
+        const h = linksContainer.previousElementSibling;
+        if (h && h.tagName === "H3") h.hidden = true;
+    }
 
     /* =========================================================
        Navigation précédent / suivant

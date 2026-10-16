@@ -15,11 +15,11 @@
     open: "Ouvrir github.com/DokuShonen directement"
   };
   const USER = "DokuShonen";
-  const PINNED_ORDER = ["manabar_web", "archiburkina", "fasoluxe", "alpha", "immo", "fariflore", "TaskBoard", "cvFR"];
+  const PINNED_ORDER = ["manabar_web", "SmartAgriMarket", "SAGESA", "kossa", "TaskBoard", "archiburkina", "fasoluxe", "alpha", "immo", "fariflore", "cvFR"];
   const LANG_COLORS = {
     PHP: "#a071c9", HTML: "#e44c23", CSS: "#563d7c", TypeScript: "#3178c6",
     Python: "#3572A5", Java: "#b07219", C: "#555555", JavaScript: "#f1e05a",
-    Shell: "#89e051", Hack: "#878787",
+    "C#": "#178600", Shell: "#89e051", Hack: "#878787",
   };
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g,
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

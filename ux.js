@@ -19,6 +19,7 @@
   const SECTIONS = isEN ? [
     { label: "Home",          hint: "#hero",       kw: "home hero start index accueil" },
     { label: "About",         hint: "#about",      kw: "about qui suis je formation education" },
+    { label: "Background",    hint: "#experience", kw: "background experience education work parcours" },
     { label: "Skills",        hint: "#skills",     kw: "skills technos stack langages technologies" },
     { label: "Projects",      hint: "#projects",   kw: "projects work portfolio projets réalisations" },
     { label: "Maquis Manager", hint: "#projects",  kw: "django python featured stock" },
@@ -30,6 +31,7 @@
   ] : [
     { label: "Accueil",        hint: "#hero",       kw: "home hero accueil start" },
     { label: "À propos",       hint: "#about",      kw: "about qui suis je formation" },
+    { label: "Parcours",       hint: "#experience", kw: "parcours expérience stage formation diplôme" },
     { label: "Compétences",    hint: "#skills",     kw: "skills technos stack langages" },
     { label: "Projets",        hint: "#projects",   kw: "projets réalisations portfolio work" },
     { label: "Maquis Manager", hint: "#projects",   kw: "django python featured stock" },

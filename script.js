@@ -37,14 +37,14 @@
   if (typingEl) {
     const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
     const roles = isEN ? [
-      'Computer Engineer',
+      'Trained Engineer, Computer Engineering Technology',
       'Full-Stack Developer',
-      'Tech Enthusiast',
+      'AI / NLP & Mobile Developer',
       'Creator of Innovative Solutions'
     ] : [
-      'Ingénieur en Technologie du Génie Informatique',
+      'Ingénieur de travaux, option Technologie du Génie Informatique',
       'Développeur Full-Stack',
-      'Passionné de Technologie',
+      'Développeur IA / NLP & Mobile',
       'Créateur de Solutions Innovantes'
     ];
     let roleIndex = 0;
