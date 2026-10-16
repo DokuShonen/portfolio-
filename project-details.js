@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 "images/projets/fasonoreesa/nllb_lora_infer.webp"
             ],
             links: [
-
+                { type: "live", url: "https://suzuyaxiii-faso-no-reesa.hf.space/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '9': {
