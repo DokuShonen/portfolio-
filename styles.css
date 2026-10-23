@@ -205,7 +205,96 @@ body {
   padding: 0 2rem;
 }
 
-.nav-logo {
+.skills-section {
+  padding: 4rem 1rem;
+}
+
+.skills-filters {
+  margin-bottom: 2rem;
+}
+
+.skills-filters select {
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor-pointer;
+  min-width: 120px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.skill-card-img {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-subtle);
+  border-radius: 6px;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-name {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.skill-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.skill-dot.active {
+  box-shadow: 0 0 4px var(--accent);
+}
+
+.skill-legend {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.skill-legend span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}.nav-logo {
   display: flex;
   align-items: center;
   gap: 0;
