@@ -928,7 +928,7 @@ body {
 
 .cv-banner-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
   gap: 1rem;
 }
@@ -936,8 +936,9 @@ body {
 .cv-pdf-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1.25rem;
+  width: 100%;
 }
 
 .cv-pdf-links a {
@@ -966,7 +967,7 @@ body {
     padding: 2rem;
   }
   .cv-banner-actions { align-items: center; }
-  .cv-banner-buttons,
+  .cv-banner-buttons { flex-wrap: wrap; justify-content: center; }
   .cv-pdf-links { justify-content: center; }
 }
 

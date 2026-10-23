@@ -71,41 +71,46 @@ document.addEventListener('DOMContentLoaded', function () {
         '2': {
             title: "Application de gestion d'hôtel",
             subtitle: "Développement Full-Stack",
-            description: "Application web complète pour la gestion des réservations, chambres et clients d'un hôtel. J'ai développé l'interface administrateur, le système de réservation et le module de paiement.",
+            description: "Application de gestion hôtelière : recherche de disponibilité par dates et par ville, réservation en ligne avec services à la carte et facture détaillée, espace client, tableau de bord de réception et administration du catalogue. J'ai conçu le modèle de données avec facturation historisée, sécurisé l'application (CSRF, mots de passe hachés, limitation des tentatives de connexion), écrit un client SMTP sans dépendance externe et réalisé le système visuel. Le site est déployé en ligne.",
             en: {
                 title: "Hotel management application",
                 subtitle: "Full-Stack Development",
-                description: "Complete web application for managing a hotel's bookings, rooms and clients. I built the administrator interface, the booking system and the payment module."
+                description: "Hotel management application: availability search by dates and city, online booking with à la carte services and detailed invoicing, client area, reception dashboard and catalogue administration. I designed the data model with historical invoicing, secured the application (CSRF, hashed passwords, login rate limiting), wrote a dependency-free SMTP client and built the visual design system. The site is live."
             },
-            technologies: ["PHP", "SQL", "HTML/CSS"],
+            technologies: ["PHP 8", "MySQL / MariaDB", "JavaScript", "Sécurité web", "SMTP"],
             images: [
-                "images/projets/fasoluxe/acceuil.webp",
-                "images/projets/fasoluxe/reserve.webp",
-                "images/projets/fasoluxe/acceuil1.webp",
-                "images/projets/fasoluxe/hotel.webp"
+                "images/projets/fasoluxe/01.webp",
+                "images/projets/fasoluxe/02.webp",
+                "images/projets/fasoluxe/03.webp",
+                "images/projets/fasoluxe/04.webp",
+                "images/projets/fasoluxe/05.webp",
+                "images/projets/fasoluxe/06.webp",
+                "images/projets/fasoluxe/07.webp"
             ],
             links: [
                 { type: "github", url: "https://github.com/DokuShonen/fasoluxe.git", label: "Code source", label_en: "Source code" },
-                { type: "live", url: "http://fasoluxe.atwebpages.com/public", label: "Voir en ligne", label_en: "View live" }
+                { type: "live", url: "https://fasoluxe.alwaysdata.net/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '3': {
-            title: "Site dynamique sur l'IA et les IoT",
-            subtitle: "Plateforme interactive",
-            description: "Développement d'un site éducatif sur l'intelligence artificielle et les objets connectés. Le site comprend un système d'articles dynamiques, une section de commentaires, et des démonstrations interactives. J'ai implémenté une API REST pour gérer le contenu et les interactions utilisateurs.",
+            title: "Laboratoire d'intelligence artificielle et d'objets connectes",
+            subtitle: "Developpement Full-Stack",
+            description: "Site d'un laboratoire d'etudiants applique a l'IA et aux objets connectes : presentation du projet, catalogue des services proposes et suivi du budget des depenses. J'ai conu la base de donnees et l'API JSON qui alimente le tableau de suivi, securise les ecritures avec des jetons anti-CSRF, et deplace le calcul des montants sur le serveur pour qu'ils ne puissent pas etre falsifies. Le site est deploye en ligne.",
             en: {
-                title: "Dynamic website about AI and IoT",
-                subtitle: "Interactive platform",
-                description: "Development of an educational website about artificial intelligence and connected objects. The site features a dynamic article system, a comments section and interactive demonstrations. I implemented a REST API to manage content and user interactions."
+                title: "Artificial intelligence and IoT research lab",
+                subtitle: "Full-Stack Development",
+                description: "Website for a student research lab focused on AI and connected objects: project presentation, catalogue of the services offered, and tracking of the project budget. I designed the database and the JSON API behind the tracking table, secured the writes with CSRF tokens, and moved the amount calculation to the server so it cannot be tampered with. The site is live."
             },
-            technologies: ["PHP", "SQL", "JavaScript", "HTML/CSS"],
+            technologies: ["PHP 8", "MySQL / MariaDB", "JavaScript", "API JSON", "Sécurité web"],
             images: [
-                "images/projets/alpha/acceuil.webp",
-                "images/projets/alpha/formulaire.webp"
+                "images/projets/alpha/01.png",
+                "images/projets/alpha/02.png",
+                "images/projets/alpha/03.png",
+                "images/projets/alpha/04.png"
             ],
             links: [
                 { type: "github", url: "https://github.com/DokuShonen/alpha.git", label: "Code source", label_en: "Source code" },
-                { type: "live", url: "http://alphaitiot.atwebpages.com", label: "Voir en ligne", label_en: "View live" }
+                { type: "live", url: "https://alphaxi.alwaysdata.net/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '4': {
@@ -119,14 +124,16 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             technologies: ["JavaScript", "Python", "SQL", "HTML/CSS"],
             images: [
-                "images/projets/immo/acceuil.webp",
-                "images/projets/immo/admin.webp",
-                "images/projets/immo/agent.webp",
-                "images/projets/immo/bailleur.webp",
-                "images/projets/immo/client.webp"
+                "images/projets/immo/01.png",
+                "images/projets/immo/02.png",
+                "images/projets/immo/03.png",
+                "images/projets/immo/04.png",
+                "images/projets/immo/05.png",
+                "images/projets/immo/06.png"
             ],
             links: [
-                { type: "github", url: "https://github.com/DokuShonen/immo.git", label: "Code source", label_en: "Source code" }
+                { type: "github", url: "https://github.com/DokuShonen/immo.git", label: "Code source", label_en: "Source code" },
+                { type: "live", url: "https://mamaison.streamlit.app/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '5': {
@@ -161,13 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             technologies: ["HTML/CSS", "JavaScript"],
             images: [
-                "images/projets/cv/cv.webp"
+                "images/projets/cv/01.png"
             ],
             links: [
-                { type: "github", url: "https://github.com/DokuShonen/cvfr.git", label: "Source FR", label_en: "FR source" },
-                { type: "github", url: "https://github.com/DokuShonen/cveng.git", label: "Source EN", label_en: "EN source" },
-                { type: "live", url: "https://cv-fr.vercel.app/", label: "Version française", label_en: "French version" },
-                { type: "live", url: "https://cveng.vercel.app/", label: "English version", label_en: "English version" }
+                { type: "github", url: "https://github.com/DokuShonen/Curriculum.git", label: "Source FR", label_en: "FR source" },
+                { type: "github", url: "https://github.com/DokuShonen/Curriculum.git", label: "Source", label_en: "Source" },
+                { type: "live", url: "https://kinda-cv.vercel.app/?lang=fr", label: "Version française", label_en: "French version" },
+                { type: "live", url: "https://kinda-cv.vercel.app/?lang=en", label: "English version", label_en: "English version" }
             ]
         },
         '7': {
@@ -191,19 +198,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 "images/projets/manabar/03.webp"
             ],
             links: [
+                { type: "live", url: "https://maquis-manager-pro.vercel.app/", label: "Site de vente", label_en: "Sales site" },
                 { type: "github", url: "https://github.com/DokuShonen/manabar_web.git", label: "Source Web", label_en: "Web source" },
                 { type: "github", url: "https://github.com/DokuShonen/Manabar_linux.git", label: "Source Linux", label_en: "Linux source" },
-                { type: "github", url: "https://github.com/DokuShonen/manabar_win.git", label: "Source Windows", label_en: "Windows source" },
-                { type: "live", url: "https://suzuya.pythonanywhere.com/", label: "Voir en ligne", label_en: "View live" }
+                { type: "github", url: "https://github.com/DokuShonen/manabar_win.git", label: "Source Windows", label_en: "Windows source" }
             ]
         },
         '8': {
-            title: "Faso no-rêesa — traduction neuronale hors-ligne",
-            subtitle: "IA & TALN — Python, PyTorch, FastAPI",
+            title: "Faso no-rêesa : traduction neuronale hors-ligne",
+            subtitle: "IA & TALN : Python, PyTorch, FastAPI",
             description: "« Faso no-rêesa » est un système de traduction automatique neuronale pensé pour les cinq langues nationales du Burkina Faso : mooré, dioula, fulfulde, gourmanchéma et haoussa. Le projet adapte le modèle NLLB-200 par fine-tuning LoRA sur un corpus de 2 500 000 phrases, ce qui réduit fortement l'empreinte du modèle sans dégrader sa qualité. L'inférence fonctionne entièrement hors-ligne sur processeur, pour 2,1 Go de RAM : ni GPU ni service externe ne sont nécessaires. Une interface web responsive consomme une API FastAPI, et la qualité de traduction est mesurée par des tests de charge et l'indicateur SacreBLEU.",
             en: {
-                title: "Faso no-rêesa — offline neural translation",
-                subtitle: "AI & NLP — Python, PyTorch, FastAPI",
+                title: "Faso no-rêesa: offline neural translation",
+                subtitle: "AI & NLP: Python, PyTorch, FastAPI",
                 description: "“Faso no-rêesa” is a neural machine translation system designed for the five national languages of Burkina Faso: Mooré, Dioula, Fulfulde, Gourmanchéma and Haoussa. The project adapts the NLLB-200 model through LoRA fine-tuning on a 2,500,000-sentence corpus, greatly reducing the model footprint without degrading quality. Inference runs fully offline on the CPU for 2.1 GB of RAM: no GPU or external service is required. A responsive web interface consumes a FastAPI API, and translation quality is measured with load tests and the SacreBLEU metric."
             },
             technologies: ["Python", "PyTorch", "NLLB-200", "LoRA / PEFT", "FastAPI", "NLP"],
@@ -216,12 +223,12 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         '9': {
-            title: "SAGESA — logiciel de gestion scolaire",
-            subtitle: "Logiciel de gestion scolaire — C# / .NET",
+            title: "SAGESA : logiciel de gestion scolaire",
+            subtitle: "Logiciel de gestion scolaire : C# / .NET",
             description: "Application de bureau destinée à la gestion complète d'un établissement scolaire : scolarité, administration et comptabilité réunies dans un seul logiciel multi-langues. Elle couvre les inscriptions, la tenue des notes et la génération des bulletins, la gestion des enseignants, des parents et du personnel administratif, le suivi de caisse ainsi qu'un journal d'audit. L'interface est construite selon le pattern MVVM avec Avalonia UI, ce qui permet de viser Windows et Linux à partir d'une même base de code.",
             en: {
-                title: "SAGESA — school management software",
-                subtitle: "School management software — C# / .NET",
+                title: "SAGESA: school management software",
+                subtitle: "School management software: C# / .NET",
                 description: "Desktop application covering the complete management of a school: enrolment, administration and accounting brought together in a single multi-language application. It handles registrations, grades and report cards, teachers, parents and administrative staff, cash desk tracking and an audit log. The UI follows the MVVM pattern on Avalonia UI, targeting both Windows and Linux from a single codebase."
             },
             technologies: ["C#", ".NET 8", "Avalonia UI", "PostgreSQL", "MVVM"],
@@ -241,16 +248,23 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         '10': {
             title: "SmartAgriMarket",
-            subtitle: "Marketplace agricole — Angular / Spring Boot",
+            subtitle: "Marketplace agricole : Angular / Spring Boot",
             description: "SmartAgriMarket est une plateforme de marketplace qui relie directement les producteurs agricoles et les acheteurs, sans intermédiaire. Elle réunit une messagerie intégrée, une bourse du matériel agricole, un forum d'entraide et le suivi logistique des commandes. L'architecture est Full Stack : frontend Angular, backend Java et base PostgreSQL conteneurisée avec Docker.",
             en: {
                 title: "SmartAgriMarket",
-                subtitle: "Agricultural marketplace — Angular / Spring Boot",
+                subtitle: "Agricultural marketplace: Angular / Spring Boot",
                 description: "SmartAgriMarket is a marketplace platform connecting agricultural producers and buyers directly, with no middleman. It combines built-in messaging, an agricultural equipment exchange, a community forum and order logistics tracking. The architecture is Full Stack: Angular frontend, Java backend and PostgreSQL database containerised with Docker."
             },
             technologies: ["Angular 18", "Spring Boot", "Java 21", "PostgreSQL", "Docker"],
             images: [
-                "images/projets/smartagrimarket/01-accueil.webp"
+                "images/projets/smartagrimarket/01.png",
+                "images/projets/smartagrimarket/02.png",
+                "images/projets/smartagrimarket/03.png",
+                "images/projets/smartagrimarket/04.png",
+                "images/projets/smartagrimarket/05.png",
+                "images/projets/smartagrimarket/06.png",
+                "images/projets/smartagrimarket/07.png",
+                "images/projets/smartagrimarket/08.png",
             ],
             links: [
                 { type: "github", url: "https://github.com/DokuShonen/SmartAgriMarket", label: "Code source", label_en: "Source code" }
@@ -258,11 +272,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         '11': {
             title: "Onvaoù ?",
-            subtitle: "Application mobile communautaire — React Native",
+            subtitle: "Application mobile communautaire : React Native",
             description: "Onvaoù ? est une application mobile communautaire qui permet de découvrir, de partager et de localiser des lieux d'intérêt. L'interface est pensée pour un usage mobile d'abord : navigation par onglets avec Expo Router, gestion d'état légère par Zustand et animations fluides. Les données sont servies par Supabase, et le tout est réuni dans une base de code TypeScript unique avec React Native.",
             en: {
                 title: "Onvaoù ?",
-                subtitle: "Community mobile app — React Native",
+                subtitle: "Community mobile app: React Native",
                 description: "Onvaoù ? is a community mobile application for discovering, sharing and locating points of interest. The interface is designed mobile-first: tab navigation with Expo Router, lightweight state management through Zustand and smooth animations. Data is served by Supabase, all within a single TypeScript codebase on React Native."
             },
             technologies: ["React Native", "Expo", "Expo Router", "TypeScript", "Supabase", "Zustand"],
@@ -274,72 +288,90 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         '12': {
-            title: "Gestion des réclamations clients",
-            subtitle: "Spring Boot / React — sécurité JWT",
+            title: "Kossa : gestion des réclamations clients",
+            subtitle: "Spring Boot / React : sécurité JWT",
             description: "Kossa est une application web full-stack dédiée à la gestion des réclamations clients au Burkina Faso. Elle couvre le cycle de vie complet du ticket : création, affectation aux agents, escalade N1 / N2, notifications par e-mail et suivi du respect des SLA. Le backend Spring Boot applique la sécurité par JWT et les tests JUnit ; le frontend React affiche les tableaux de bord et les statistiques d'exploitation. La base PostgreSQL conserve l'historique et le journal d'audit.",
             en: {
-                title: "Customer Complaint Management",
-                subtitle: "Spring Boot / React — JWT security",
+                title: "Kossa: Customer Complaint Management",
+                subtitle: "Spring Boot / React: JWT security",
                 description: "Kossa is a full-stack web application for customer complaint management in Burkina Faso. It covers the complete ticket lifecycle: creation, assignment to agents, N1 / N2 escalation, e-mail notifications and SLA compliance tracking. The Spring Boot backend enforces JWT security and JUnit tests; the React frontend displays dashboards and operational statistics. The PostgreSQL database keeps the history and audit log."
             },
             technologies: ["Java 17", "Spring Boot", "Spring Security", "JWT", "React", "PostgreSQL"],
             images: [
-                "images/projets/reclamations/ReclamationController.webp"
+                "images/projets/kossa/01.png",
+                "images/projets/kossa/02.png",
+                "images/projets/kossa/03.png",
+                "images/projets/kossa/04.png",
+                "images/projets/kossa/05.png",
+                "images/projets/kossa/06.png",
+                "images/projets/kossa/07.png",
             ],
             links: [
                 { type: "github", url: "https://github.com/DokuShonen/kossa", label: "Code source", label_en: "Source code" },
-                { type: "live", url: "https://kossa-theta.vercel.app", label: "Voir en ligne", label_en: "View live" }
+                { type: "live", url: "https://kossabf.vercel.app/", label: "Voir en ligne", label_en: "View live" }
             ]
         },
         '13': {
             title: "TaskBoard",
-            subtitle: "Application Kanban — Angular / Spring Boot",
+            subtitle: "Application Kanban : Angular / Spring Boot",
             description: "TaskBoard est une application web de gestion de tâches inspirée de Trello. Le tableau kanban permet de suivre les tâches à faire, en cours et terminées, tandis que le backend Spring Boot expose une API documentée avec Swagger. Le projet s'accompagne de diagrammes UML (cas d'utilisation, classes, séquence) et d'une persistance PostgreSQL assurée par JPA / Hibernate.",
             en: {
                 title: "TaskBoard",
-                subtitle: "Kanban application — Angular / Spring Boot",
+                subtitle: "Kanban application: Angular / Spring Boot",
                 description: "TaskBoard is a Trello-inspired web task management application. The Kanban board tracks to-do, in-progress and done tasks, while the Spring Boot backend exposes a Swagger-documented API. The project ships with UML diagrams (use case, class, sequence) and PostgreSQL persistence through JPA / Hibernate."
             },
             technologies: ["Angular", "Spring Boot", "Java", "PostgreSQL", "Maven"],
             images: [
-                "images/projets/taskboard/TaskBoardApplication.webp"
+                "images/projets/taskboard/00.png",
+                "images/projets/taskboard/01.png",
+                "images/projets/taskboard/02.png"
             ],
             links: [
                 { type: "github", url: "https://github.com/DokuShonen/TaskBoard", label: "Code source", label_en: "Source code" }
             ]
         },
         '14': {
-            title: "Price List Manager",
-            subtitle: "Gestion & analyse de tarifs — Java / Angular",
+            title: "Tarifika",
+            subtitle: "Gestion & analyse de tarifs : Java / Angular",
             description: "Price List Manager est une solution Full Stack dédiée aux listes de tarifs d'interconnexion : importation depuis des fichiers Excel, analyse des écarts et comparaison périodique entre opérateurs. Le backend Java 21 et Spring Boot gère l'authentification JWT et la persistance PostgreSQL ; le frontend Angular 18 restitue les tableaux comparatifs et les graphiques via Chart.js, avec un import de fichiers assuré par Apache POI.",
             en: {
-                title: "Price List Manager",
-                subtitle: "Price management & analysis — Java / Angular",
+                title: "Tarifika",
+                subtitle: "Price management & analysis: Java / Angular",
                 description: "Price List Manager is a Full Stack solution for interconnection price lists: import from Excel files, variance analysis and periodic comparison between operators. The Java 21 and Spring Boot backend handles JWT authentication and PostgreSQL persistence; the Angular 18 frontend renders comparison tables and Chart.js charts, with file imports powered by Apache POI."
             },
             technologies: ["Java 21", "Spring Boot", "Angular 18", "PostgreSQL", "Apache POI"],
             images: [
-                "images/projets/pricelist/PriceListCompare.webp"
+                "images/projets/tarifika/01.png",
+                "images/projets/tarifika/02.png",
+                "images/projets/tarifika/03.png",
+                "images/projets/tarifika/04.png",
+                "images/projets/tarifika/05.png",
+                "images/projets/tarifika/06.png",
             ],
             links: [
-
+                { type: "github", url: "https://github.com/DokuShonen/Tarifika", label: "Code source", label_en: "Source code" },
+                { type: "site", url: "https://tarifika.vercel.app/", label: "Site de présentation", label_en: "Product page" }
             ]
         },
         '15': {
             title: "AgroBurkina",
-            subtitle: "Gestion de coopérative — PHP / MySQL",
-            description: "AgroBurkina est un système informatisé de gestion d'une coopérative agricole burkinabè. Il centralise le catalogue des produits, le suivi des stocks et la prévision de rendement, avec des exports CSV destinés au reporting. L'application repose sur une base MySQL / MariaDB servie par Apache, complétée par des traitements Excel et un module Access / VBA pour les besoins comptables.",
+            subtitle: "Gestion de coopérative : PHP / MySQL",
+            description: "AgroBurkina est un système informatisé de gestion d'une coopérative agricole burkinabè. Il centralise le catalogue des produits, le suivi des membres, des parcelles, des apports et des ventes, la prise de rendez-vous et la prévision de rendement, avec des exports CSV destinés au reporting. L'application est développée en PHP 8 sur une base MySQL / MariaDB servie par Apache : les données sont persistées en base et l'application bascule sur un jeu de démonstration lorsque celle-ci est injoignable. Un module écrit en langage C calcule les prévisions de rendement et se synchronise avec la plateforme, tandis que le bulletin météo agricole provient de l'API Open-Meteo, avec cache et repli saisonnier.",
             en: {
                 title: "AgroBurkina",
-                subtitle: "Cooperative management — PHP / MySQL",
-                description: "AgroBurkina is a computerised management system for a Burkinabè agricultural cooperative. It centralises the product catalogue, stock tracking and yield forecasting, with CSV exports for reporting. The application runs on a MySQL / MariaDB database served by Apache, complemented by Excel processing and an Access / VBA module for accounting needs."
+                subtitle: "Cooperative management: PHP / MySQL",
+                description: "AgroBurkina is a computerised management system for a Burkinabè agricultural cooperative. It centralises the product catalogue and the tracking of members, plots, deliveries and sales, along with appointment booking and yield forecasting, with CSV exports for reporting. The application is built in PHP 8 on a MySQL / MariaDB database served by Apache: data is persisted in the database and the app falls back to a demonstration dataset whenever the database is unreachable. A module written in C computes the yield forecasts and synchronises with the platform, while the agricultural weather bulletin comes from the Open-Meteo API, with caching and a seasonal fallback."
             },
-            technologies: ["PHP", "MySQL / MariaDB", "Access / VBA", "Apache"],
+            technologies: ["PHP 8", "MySQL / MariaDB", "Module C", "API Open-Meteo"],
             images: [
-                "images/projets/agroburkina/catalogue.webp"
+                "images/projets/agroburkina/01.webp",
+                "images/projets/agroburkina/02.webp",
+                "images/projets/agroburkina/03.webp",
+                "images/projets/agroburkina/04.webp",
             ],
             links: [
-
+                { type: "github", url: "https://github.com/DokuShonen/AgroBurkina", label: "Code source", label_en: "Source code" },
+                { type: "live", url: "https://burkina.alwaysdata.net/", label: "Voir en ligne", label_en: "View live" }
             ]
         }
     };
