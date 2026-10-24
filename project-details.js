@@ -513,11 +513,10 @@ document.addEventListener('DOMContentLoaded', function () {
        ========================================================= */
     const techContainer = document.getElementById('project-techs');
     techContainer.innerHTML = '';
-    project.technologies.forEach((tech, index) => {
+    project.technologies.forEach(tech => {
         const span = document.createElement('span');
         span.className = 'tech-badge';
         span.textContent = tech;
-        span.style.animationDelay = `${index * 0.1}s`;
         techContainer.appendChild(span);
     });
 

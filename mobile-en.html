@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Mobile portfolio | KINDA Ulrich WENDSONGDE</title>
+    <meta name="description" content="Mobile version of KINDA Ulrich WENDSONGDE's portfolio: full-stack, AI and mobile projects, skills and contact.">
+    <meta name="theme-color" content="#05070d">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://kindaulrich.vercel.app/en.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230d1117'/%3E%3Ctext x='50' y='72' font-family='monospace' font-size='52' font-weight='bold' fill='%2300ff88' text-anchor='middle'%3E_/%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest-mobile-en.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Skip to content</a>
+
+    <header class="app-topbar">
+        <a class="app-logo" href="#accueil" aria-label="Back to home"><span class="logo-glyph">&lt;</span>UW<span class="logo-glyph">/&gt;</span></a>
+        <div class="app-topbar-actions">
+            <span class="app-clock" data-clock aria-hidden="true">--:--</span>
+            <a class="app-chip" href="mobile.html" lang="fr" aria-label="Passer au français">FR</a>
+            <a class="app-chip" href="en.html?desktop=1" data-desktop aria-label="Open desktop version" title="Desktop version"><i class="fas fa-display" aria-hidden="true"></i></a>
+        </div>
+    </header>
+
+    <main id="contenu">
+        <div class="m-desktop-hint">
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            <span>Dedicated mobile version.</span>
+            <a href="en.html?desktop=1" data-desktop>Desktop version</a>
+        </div>
+
+        <!-- HOME -->
+        <section id="accueil" class="m-screen m-hero" data-tab="accueil">
+            <span class="m-terminal">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="path">~/ulrich-wendsongde</span>
+            </span>
+
+            <p class="m-eyebrow">// Hi, I am</p>
+            <h1>KINDA Ulrich <span>WENDSONGDE</span></h1>
+
+            <p class="m-role">
+                <span><span class="kw">const</span> Computer Engineering</span>
+                <span class="role-opt">option Information Technology</span>
+            </p>
+
+            <p class="m-desc">Full-stack web, AI and natural language processing, mobile, systems and databases. I build useful, tested and documented digital solutions.</p>
+
+            <div class="m-cta">
+                <a class="m-btn m-btn-primary" href="#projets"><i class="fas fa-code" aria-hidden="true"></i> My projects</a>
+                <a class="m-btn m-btn-ghost" href="#contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Contact me</a>
+            </div>
+
+            <div class="m-stats">
+                <div class="m-stat"><b>15</b><span>Projects</span></div>
+                <div class="m-stat"><b>29</b><span>Technologies</span></div>
+                <div class="m-stat"><b>4</b><span>Experiences</span></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="apropos" class="m-screen m-screen-alt" data-tab="apropos">
+            <div class="m-head">
+                <span class="m-tag"><i class="fas fa-user" aria-hidden="true"></i> // About</span>
+                <h2>Who am I?</h2>
+                <div class="m-rule"></div>
+            </div>
+
+            <div class="m-cards">
+                <article class="m-card">
+                    <span class="m-card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                    <h3>Education</h3>
+                    <p>Bachelor's degree in Computer Engineering Technology (Université Aube Nouvelle, 2026), scientific baccalaureate series D, and Full Stack training at Orange Digital Center.</p>
+                </article>
+                <article class="m-card">
+                    <span class="m-card-icon"><i class="fas fa-code-branch" aria-hidden="true"></i></span>
+                    <h3>Approach</h3>
+                    <p>Technical rigor and creativity to solve complex problems, with a constant drive to grow in every area of software development.</p>
+                </article>
+                <article class="m-card">
+                    <span class="m-card-icon"><i class="fas fa-rocket" aria-hidden="true"></i></span>
+                    <h3>Goals</h3>
+                    <p>Apply my knowledge to stimulating projects and keep growing my technical expertise.</p>
+                </article>
+            </div>
+
+            <a class="m-inline-link" href="#parcours"><i class="fas fa-route" aria-hidden="true"></i> View my background</a>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="competences" class="m-screen" data-tab="competences">
+            <div class="m-head">
+                <span class="m-tag"><i class="fas fa-terminal" aria-hidden="true"></i> // Skills</span>
+                <h2>My technologies</h2>
+                <div class="m-rule"></div>
+            </div>
+
+            <div class="skills-tiles" id="skillsTiles"></div>
+            <noscript><p class="m-card">Enable JavaScript to display the skills.</p></noscript>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projets" class="m-screen m-screen-alt" data-tab="projets">
+            <div class="m-head">
+                <span class="m-tag"><i class="fas fa-folder-open" aria-hidden="true"></i> // Projects</span>
+                <h2>My work</h2>
+                <p>15 selected projects, from front-end to full-stack, including AI and mobile.</p>
+                <div class="m-rule"></div>
+            </div>
+
+            <div class="m-filters" id="projectFilters" role="tablist" aria-label="Filter projects"></div>
+
+            <div class="m-projects" id="projectsList"></div>
+            <noscript><p class="m-card"><a href="en.html#projects">View the projects on the desktop version</a></p></noscript>
+        </section>
+
+        <!-- BACKGROUND -->
+        <section id="parcours" class="m-screen" data-tab="apropos">
+            <div class="m-head">
+                <span class="m-tag"><i class="fas fa-briefcase" aria-hidden="true"></i> // Background</span>
+                <h2>Experience &amp; education</h2>
+                <div class="m-rule"></div>
+            </div>
+
+            <div class="m-acc">
+                <details>
+                    <summary>
+                        <span class="acc-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                        Professional experience
+                        <span class="acc-count">4</span>
+                        <i class="fas fa-chevron-down acc-chevron" aria-hidden="true"></i>
+                    </summary>
+                    <div class="acc-body">
+                        <div class="acc-item">
+                            <span class="acc-date">Oct 2026 - Present</span>
+                            <h4>IT Officer</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Propriety Consulting International (PCI Sarl), Ouagadougou</span>
+                            <ul>
+                                <li>Maintain and evolve the firm's IT tools.</li>
+                                <li>Design software solutions and manage databases.</li>
+                                <li>Compliance, security, technical documentation and support.</li>
+                            </ul>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">May - July 2026</span>
+                            <h4>Full Stack Development Training</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Orange Digital Center</span>
+                            <ul>
+                                <li>Backend with Java / Spring Boot and REST API design.</li>
+                                <li>Frontend with Angular / TypeScript and service integration.</li>
+                                <li>Final project: SmartAgriMarket, a Full Stack agricultural platform.</li>
+                            </ul>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">January - April 2026</span>
+                            <h4>AI &amp; Full-Stack Development Intern</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> RIGO SARL, Ouagadougou</span>
+                            <ul>
+                                <li>Faso no-rêesa project: neural translation for 5 national languages.</li>
+                                <li>NLLB-200 adapted with LoRA, 2.5M-sentence corpus.</li>
+                                <li>FastAPI API, web interface, load testing and SacreBLEU evaluation.</li>
+                            </ul>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">August - September 2025</span>
+                            <h4>Web Development Intern</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> RIGO SARL, Ouagadougou</span>
+                            <ul>
+                                <li>Professional portfolio: mock-ups and front-end development.</li>
+                                <li>Community translation application (PHP, MySQL, JavaScript).</li>
+                                <li>Deployment and web hosting administration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        <span class="acc-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                        Education
+                        <span class="acc-count">4</span>
+                        <i class="fas fa-chevron-down acc-chevron" aria-hidden="true"></i>
+                    </summary>
+                    <div class="acc-body">
+                        <div class="acc-item">
+                            <span class="acc-date">2026</span>
+                            <h4>Bachelor's degree in Computer Engineering Technology</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Université Aube Nouvelle</span>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">2023</span>
+                            <h4>Scientific baccalaureate, series D</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Lycée Privé La Grâce</span>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">2019</span>
+                            <h4>Lower secondary certificate (BEPC)</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Collège Saint Joseph Moukassa</span>
+                        </div>
+                        <div class="acc-item">
+                            <span class="acc-date">2015</span>
+                            <h4>Primary school certificate</h4>
+                            <span class="acc-org"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Lycée Privé Saint Augustin de Koudougou</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="m-screen m-screen-alt" data-tab="contact">
+            <div class="m-head">
+                <span class="m-tag"><i class="fas fa-envelope" aria-hidden="true"></i> // Contact</span>
+                <h2>Contact me</h2>
+                <p>Available for opportunities and collaborations.</p>
+                <div class="m-rule"></div>
+            </div>
+
+            <div class="m-contact">
+                <a class="m-contact-row" href="mailto:kindaulrich1@gmail.com">
+                    <span class="m-contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                    <span class="m-contact-text"><small>Email</small><span>kindaulrich1@gmail.com</span></span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a class="m-contact-row" href="tel:+22654748444">
+                    <span class="m-contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                    <span class="m-contact-text"><small>Phone</small><span>+226 54 74 84 44</span></span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a class="m-contact-row" href="https://wa.me/22673345912" target="_blank" rel="noopener noreferrer">
+                    <span class="m-contact-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                    <span class="m-contact-text"><small>WhatsApp</small><span>+226 73 34 59 12</span></span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a class="m-contact-row" href="https://www.linkedin.com/in/ulrich-kinda-0766b6289" target="_blank" rel="noopener noreferrer">
+                    <span class="m-contact-icon"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="m-contact-text"><small>LinkedIn</small><span>/in/ulrich-wendsongde</span></span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a class="m-contact-row" href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer">
+                    <span class="m-contact-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+                    <span class="m-contact-text"><small>GitHub</small><span>/DokuShonen</span></span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="m-contact-cta">
+                <a class="m-btn m-btn-primary" href="mailto:kindaulrich1@gmail.com"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a>
+                <a class="m-btn m-btn-ghost" href="https://wa.me/22673345912" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+            </div>
+
+            <a class="m-inline-link" href="https://kinda-cv.vercel.app/?lang=en" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-lines" aria-hidden="true"></i> View my CV</a>
+        </section>
+    </main>
+
+    <footer class="m-footer">
+        <div class="m-footer-logo">&lt;UW/&gt;</div>
+        <p>KINDA Ulrich WENDSONGDE · <span data-year>2026</span></p>
+        <div class="m-footer-links">
+            <a href="en.html?desktop=1" data-desktop><i class="fas fa-display" aria-hidden="true"></i> Desktop version</a>
+            <a href="mobile.html" lang="fr"><i class="fas fa-globe" aria-hidden="true"></i> Français</a>
+            <a href="#accueil"><i class="fas fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+        </div>
+    </footer>
+
+    <nav class="app-tabbar" aria-label="Main navigation">
+        <a class="tab-item active" href="#accueil" data-target="accueil" aria-current="page">
+            <i class="fas fa-house" aria-hidden="true"></i><span>Home</span>
+        </a>
+        <a class="tab-item" href="#apropos" data-target="apropos">
+            <i class="fas fa-user" aria-hidden="true"></i><span>About</span>
+        </a>
+        <a class="tab-item" href="#competences" data-target="competences">
+            <i class="fas fa-layer-group" aria-hidden="true"></i><span>Skills</span>
+        </a>
+        <a class="tab-item" href="#projets" data-target="projets">
+            <i class="fas fa-folder-open" aria-hidden="true"></i><span>Projects</span>
+        </a>
+        <a class="tab-item" href="#contact" data-target="contact">
+            <i class="fas fa-envelope" aria-hidden="true"></i><span>Contact</span>
+        </a>
+    </nav>
+
+    <script src="skills-tiles.js"></script>
+    <script src="mobile.js"></script>
+</body>
+</html>

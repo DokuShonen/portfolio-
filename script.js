@@ -151,24 +151,7 @@
     );
     revealElements.forEach((el) => revealObserver.observe(el));
   }
-  const skillFills = document.querySelectorAll('.skill-fill');
-  if (skillFills.length > 0) {
-    const skillObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const fill = entry.target;
-            fill.style.setProperty('--target-width', fill.dataset.width + '%');
-            fill.classList.add('animated');
-            fill.closest('.skill-bar')?.setAttribute('data-level', fill.dataset.width + '%');
-            skillObserver.unobserve(fill);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    skillFills.forEach((fill) => skillObserver.observe(fill));
-  }
+  // Les jauges de compétences sont désormais des tuiles gérées par skills-tiles.js.
   const statNumbers = document.querySelectorAll('.stat-number');
   if (statNumbers.length > 0) {
     const statObserver = new IntersectionObserver(

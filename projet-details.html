@@ -125,30 +125,21 @@
         .tech-badge {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.78rem;
-            color: var(--text-muted);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-right: 0.3rem;
-            margin-bottom: 0.3rem;
-            transition: opacity 0.3s;
-            white-space: nowrap;
+            color: var(--accent);
+            background: var(--accent-subtle);
+            border: 1px solid var(--border-accent);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.3s;
         }
 
         .tech-badge:hover {
-            opacity: 0.8;
-        }
-
-        /* Animation d'apparition un par un */
-        .tech-badge {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
+            background: var(--accent);
+            color: var(--bg-primary);
         }
 
         .project-links {

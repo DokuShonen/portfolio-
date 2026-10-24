@@ -15,3 +15,6 @@ npm-debug.log*
 # Build
 dist/
 build/
+
+# Document personnel non publié
+CV_Ulrich_KINDA.pdf

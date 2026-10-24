@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="mobile-redirect.js"></script>
     <title>Portfolio | KINDA Ulrich WENDSONGDE - Ingénieur de travaux TGI</title>
     <meta name="description" content="Portfolio de KINDA Ulrich WENDSONGDE, ingénieur de travaux option Technologie du Génie Informatique : projets full-stack, IA/NLP, mobile, systèmes et bases de données, compétences techniques et contact.">
 
@@ -135,7 +136,7 @@
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-count="27">0</span>
+                            <span class="stat-number" data-count="29">0</span>
                             <span class="stat-label">Technologies</span>
                         </div>
                         <div class="stat-divider"></div>
@@ -372,11 +373,488 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section py-12">
-            <div class="container mx-auto">
-                <SkillsSection />
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><span class="tag-prompt">&gt;_</span> // Compétences</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Mes technologies</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                </div>
+
+                <div class="skills-tiles" id="skillsTiles"></div>
             </div>
-        </section><!-- Projet 7 -->
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag reveal-up"><i class="fas fa-folder-open"></i> // Projets</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">Mes réalisations</h2>
+                    <div class="section-divider reveal-up" style="--delay: 0.15s"></div>
+                    <p class="section-subtitle reveal-up" style="--delay: 0.2s">Projets personnels démontrant mes compétences techniques</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Projet fasonoreesa -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="ia" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/fasonoreesa/Faso no-rɛɛsa.png" alt="Faso no-rêesa" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://suzuyaxiii-faso-no-reesa.hf.space/" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#01</span>
+                                <span class="project-category">IA</span>
+                            </div>
+                            <h3>Faso no-rêesa</h3>
+                            <p>Système de traduction neuronale hors-ligne pour 5 langues nationales du Burkina Faso : NLLB-200 adapté par LoRA, corpus de 2,5 M de phrases, exécution 100 % CPU.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>PyTorch</span>
+                                <span>NLLB-200</span>
+                                <span>LoRA</span>
+                                <span>NLP</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>ia</span></div><a href="projet-details.html?id=8" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet lycee -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/sagesa/dashboard_thumb.webp" alt="SAGESA, school management software" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/SAGESA" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://sagesa.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#02</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>SAGESA</h3>
+                            <p>Application desktop de gestion scolaire, administrative et comptable : inscriptions, notes, bulletins, caisse et journal d'audit.</p>
+                            <div class="project-tech">
+                                <span>C#</span>
+                                <span>.NET 8</span>
+                                <span>Avalonia UI</span>
+                                <span>PostgreSQL</span>
+                                <span>MVVM</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=9" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet smartagrimarket -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/smartagrimarket/01.png" alt="SmartAgriMarket" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/SmartAgriMarket" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#03</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>SmartAgriMarket</h3>
+                            <p>Marketplace agricole reliant directement producteurs et acheteurs : messagerie, bourse de matériel, forum et suivi logistique.</p>
+                            <div class="project-tech">
+                                <span>Angular 18</span>
+                                <span>Spring Boot</span>
+                                <span>Java 21</span>
+                                <span>PostgreSQL</span>
+                                <span>Docker</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=10" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet onvaoù -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="mobile" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/onvao/explore_thumb.webp" alt="Onvaoù ?" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#04</span>
+                                <span class="project-category">MOBILE</span>
+                            </div>
+                            <h3>Onvaoù ?</h3>
+                            <p>Application mobile communautaire de découverte, de partage et de localisation de lieux d'intérêt.</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Expo</span>
+                                <span>TypeScript</span>
+                                <span>Supabase</span>
+                                <span>Zustand</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>mobile</span></div><a href="projet-details.html?id=11" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet reclamations -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/kossa/01.png" alt="Kossa, gestion des réclamations clients" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/kossa" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://kossabf.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#05</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>Kossa</h3>
+                            <p>Gestion du cycle de vie des réclamations : affectation, escalade N1/N2 et suivi des SLA.</p>
+                            <div class="project-tech">
+                                <span>Java 17</span>
+                                <span>Spring Boot</span>
+                                <span>Spring Security</span>
+                                <span>JWT</span>
+                                <span>React</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=12" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet taskboard -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/taskboard/00.png" alt="TaskBoard" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/TaskBoard" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#06</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>TaskBoard</h3>
+                            <p>Application web de gestion de tâches inspirée de Trello, avec documentation Swagger et diagrammes UML.</p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>Spring Boot</span>
+                                <span>Java</span>
+                                <span>PostgreSQL</span>
+                                <span>Maven</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=13" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet tarifika -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/tarifika/01.png" alt="Tarifika" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/Tarifika" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://tarifika.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="Site de présentation">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#07</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>Tarifika</h3>
+                            <p>Solution Full Stack de gestion, d'importation, d'analyse et de comparaison de listes de tarifs d'interconnexion.</p>
+                            <div class="project-tech">
+                                <span>Java 21</span>
+                                <span>Spring Boot</span>
+                                <span>Angular 18</span>
+                                <span>PostgreSQL</span>
+                                <span>Apache POI</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=14" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet agroburkina -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/agroburkina/01_thumb.webp" alt="AgroBurkina" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/AgroBurkina" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://burkina.alwaysdata.net/" target="_blank" rel="noopener noreferrer" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#08</span>
+                                <span class="project-category">FULL-STACK</span>
+                            </div>
+                            <h3>AgroBurkina</h3>
+                            <p>Gestion d'une coopérative agricole burkinabè : catalogue, membres, parcelles, apports, ventes et prévision de rendement.</p>
+                            <div class="project-tech">
+                                <span>PHP 8</span>
+                                <span>MySQL / MariaDB</span>
+                                <span>Module C</span>
+                                <span>API Open-Meteo</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack</span></div><a href="projet-details.html?id=15" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Projet 1 -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="front-end" data-featured="true">
+                        <div class="project-image">
+                            <img src="images/projets/archiburkina/acceuil_thumb.webp" alt="ArchiBurkina" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/archiburkina.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://archiburkina.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#09</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>ArchiBurkina</h3>
+                            <p>Site vitrine responsive pour une entreprise d'architecture.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end</span></div><a href="projet-details.html?id=1" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 -->
+                    <article class="project-card reveal-up" style="--delay: 0.08s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/fasoluxe/01_thumb.webp" alt="FasoLuxe" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/fasoluxe.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://fasoluxe.alwaysdata.net/" target="_blank" rel="noopener" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#10</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>FasoLuxe HÔTEL</h3>
+                            <p>Solution complète de gestion hôtelière avec interface admin et client.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · MySQL</span></div><a href="projet-details.html?id=2" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 -->
+                    <article class="project-card reveal-up" style="--delay: 0.16s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/alpha/01.png" alt="Alpha" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/alpha.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://alphaxi.alwaysdata.net/" target="_blank" rel="noopener" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#11</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>Alpha</h3>
+                            <p>Site dynamique sur l'IA et les objets connectés avec commentaires.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>SQL</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · API REST</span></div><a href="projet-details.html?id=3" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 4 -->
+                    <article class="project-card reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/immo/01_thumb.webp" alt="ImmoPro" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/immo.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://mamaison.streamlit.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#12</span>
+                                <span class="project-category">Full-Stack</span>
+                            </div>
+                            <h3>IMMO</h3>
+                            <p>Solution multi-plateforme avec backend Python et mobile Flutter.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>full-stack · SQL</span></div><a href="projet-details.html?id=4" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 5 -->
+                    <article class="project-card reveal-up" style="--delay: 0.08s" data-category="front-end" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/fariflore/acc_thumb.webp" alt="Fariflore" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/fariflore.git" target="_blank" class="project-action magnetic" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://fariflore.vercel.app/" target="_blank" class="project-action magnetic" aria-label="Voir en ligne">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#13</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>Fariflore</h3>
+                            <p>Site de présentation d'un commerce d'organisation événementielle.</p>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end</span></div><a href="projet-details.html?id=5" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 6 -->
+                    <article class="project-card reveal-up" style="--delay: 0.16s" data-category="front-end" data-featured="false">
+                        <div class="project-image">
+                            <img src="images/projets/cv/01_thumb.webp" alt="CV" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="https://github.com/DokuShonen/Curriculum.git" target="_blank" class="project-action magnetic" aria-label="GitHub FR">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://kinda-cv.vercel.app/" target="_blank" class="project-action magnetic" aria-label="CV Français">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-id">#14</span>
+                                <span class="project-category">Front-End</span>
+                            </div>
+                            <h3>Curriculum Vitae</h3>
+                            <p>CV interactif retracant mon parcours et compétences.</p>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-stat"><span>drwxr-xr-x</span><span>front-end · FR/EN</span></div><a href="projet-details.html?id=6" class="project-link">
+                                Voir les détails <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 7 -->
                     <article class="project-card project-card-featured reveal-up" style="--delay: 0s" data-category="full-stack" data-featured="true">
                         <div class="project-image">
                             <img src="images/projets/manabar/01_thumb.webp" alt="Manabar" loading="lazy">
@@ -596,111 +1074,7 @@
     <script src="wow.js"></script>
     <script src="ambiance.js"></script>
     <script src="filters.js"></script>
+    <script src="skills-tiles.js"></script>
     <script src="github.js"></script>
-<script>
- // Chargement des données de compétences
- document.addEventListener('DOMContentLoaded', function() {
-   // On utilisera les données inline pour éviter les requêtes supplémentaires
-   const skillsData = [
-     { name: "React.js", category: "frontend", level: 4 },
-     { name: "JavaScript", category: "frontend", level: 3 },
-     { name: "HTML5", category: "frontend", level: 5 },
-     { name: "CSS3", category: "frontend", level: 4 },
-     { name: "Vue.js", category: "frontend", level: 3 },
-     { name: "TailwindCSS", category: "frontend", level: 2 },
-     { name: "Sass", category: "frontend", level: 3 },
-     { name: "JavaScript Typescript", category: "frontend", level: 4 },
-     { name: "Python", category: "backend", level: 4 },
-     { name: "Java / Spring Boot", category: "backend", level: 4 },
-     { name: "Node.js", category: "backend", level: 4 },
-     { name: "FastAPI", category: "backend", level: 3 },
-     { name: "C# / .NET", category: "backend", level: 3 },
-     { name: "PostgreSQL", category: "database", level: 2 },
-     { name: "MySQL", category: "database", level: 3 },
-     { name: "MongoDB", category: "database", level: 1 },
-     { name: "Git", category: "outils", level: 5 },
-     { name: "Docker", category: "outils", level: 4 },
-     { name: "Figma", category: "outils", level: 3 },
-     { name: "Adobe XD", category: "outils", level: 2 },
-     { name: "Blender", category: "creatif", level: 3 },
-     { name: "Motion Design", category: "creatif", level: 2 }
-   ];
-   
-   const categories = ["Tous", "Frontend", "Backend", "Base de données", "Outils", "Créatif"];
-   
-   // État du filtre
-   const filterSelect = document.createElement('select');
-   filterSelect.id = 'skill-filter';
-   filterSelect.innerHTML = \`<option value="Tous">Tous</option>\${categories.map(c => \`<option value="\${c}">\${c}</option>\`).join(''})\`;
-   document.querySelector('.skills-filters').appendChild(filterSelect);
-   
-   // grille de compétences
-   const skillsGrid = document.querySelector('.skills-grid');
-   if (!skillsGrid) return;
-   
-   function renderSkills(filter = 'Tous') {
-     const filtered = filter === 'Tous' 
-       ? skillsData 
-       : skillsData.filter(s => s.category.toLowerCase() === filter.toLowerCase());
-   
-     skillsGrid.innerHTML = filtered.map((skill, index) => {
-       const dotColors = {
-         1: 'bg-blue-400',
-         2: 'bg-blue-600', 
-         3: 'bg-amber-500',
-         4: 'bg-green-500',
-         5: 'bg-red-500'
-       };
-       
-       const level = skill.level;
-       const dots = [...Array(5)].map((_, i) => 
-         \`<span class="w-2 h-2 rounded-full \${i < level ? dotColors[level] : 'bg-gray-700'} mx-1"></span>\`
-       ).join('');
-       
-       const logoMap = {
-         'React.js': '⚛️',
-         'JavaScript': '⚙️',
-         'HTML5': '<html5>',
-         'CSS3': '<style>',
-         'Python': '≥π',
-         'Java / Spring Boot': '☕',
-         'Node.js': '☕',
-         'FastAPI': '🟢',
-         'PostgreSQL': '🐘',
-         'MySQL': '🐬',
-         'Git': '📦',
-         'Docker': '🐳',
-         'Figma': '🎨',
-         'Blender': '🎮',
-         'Motion Design': '🎬'
-       };
-       
-       const logo = logoMap[skill.name] || '💻';
-       
-       return \`<div class="p-4 rounded-xl bg-[#131c35] cursor-pointer transition-all duration-300 border border-transparent hover:border-gray-700 \${index === 0 ? 'border-yellow-400 shadow-yellow-500/10' : ''}" 
-                 onclick="filterSkills('\${skill.category}')">
-         <div class="flex flex-col items-center text-center">
-           <div class="w-10 h-12 flex items-center justify-center mb-2 border-b border-gray-700">
-             <span class="text-2xl inline-block">${logo}</span>
-           </div>
-           <span class="text-sm font-medium text-gray-300 mb-1 capitalize">${skill.name}</span>
-           <div class="flex gap-1 my-2">
-             ${dots}
-           </div>
-         </div>
-       </div>\`;
-     };
-     
-     renderSkills();
-     
-     // Gestion du filtre
-     const filterSelect = document.getElementById('skill-filter');
-     if (filterSelect) {
-       filterSelect.addEventListener('change', (e) => {
-         renderSkills(e.target.value);
-       });
-     }
- });
-});
-</script></body>
+</body>
 </html>
